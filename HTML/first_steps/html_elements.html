@@ -43,6 +43,13 @@
   </head>
   <body>
     <!-- Body section, here are the elements used for working with text. -->
+    <!-- Anchor elements are used to create links-->
+    <a href="about.html"> About me </a>
+    <!-- download atribute -->
+    <a href="imgs/descarga.jpg" download>Downoad HTML image</a>
+    <!-- anchor to section element that says CSS -->
+    <a href="#section-css">CSS</a>
+
     <!-- Headings are used to create a hierarchy. -->
     <h1>Heading 1</h1>
     <!-- Every web page should have one and only one h1 element, this represents what this page is all about -->
@@ -75,10 +82,6 @@
     <h3>Using again h3 after an h2.</h3>
     <!-- Paragraph element which is used for displayin text. -->
     <p>first stepts in <em>HTML</em>!</p>
-    <!-- Anchor elements are used to create links-->
-    <a href="about.html"> About me </a>
-    <!-- download atribute -->
-    <a href="imgs/descarga.jpg" download>Downoad HTML image</a>
     <h2>HTML</h2>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nisi
@@ -103,7 +106,7 @@
       dolore nostrum dignissimos hic nam in quibusdam provident fugiat! Id alias
       consequatur natus harum!
     </p>
-    <h2>CSS</h2>
+    <h2 id="section-css">CSS</h2>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
       tempore in eligendi aliquam, eum ex non ducimus quo dolor odio nemo
@@ -128,5 +131,13 @@
       voluptatem. Adipisci commodi impedit quibusdam, accusantium tempora
       consectetur alias.
     </p>
+    <!-- Jump to the top of the page. -->
+    <p><a href="#">GO TOP</a></p>
+    <!-- External web site without opening a new tab -->
+    <p><a href="https://google.com.ar">go google</a></p>
+    <!-- External we site opening a new tab.-->
+    <p><a href="https://google.com.ar" target="_blank">on new tab</a></p>
+    <!-- Link an email-->
+    <p><a href="mailto:juanbautistadeangelis@gmail.com">email me</a></p>
   </body>
 </html>
