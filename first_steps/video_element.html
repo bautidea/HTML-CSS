@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video element</title>
+    <style>
+      .download_video {
+        width: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      IMPORTANT - There might still browsers that dont support the 'video'  element, to check 
+      which element is supoorted by each browser go to this page.
+      https://caniuse.com/
+    -->
+    <!--
+      Here we use 'controls' atributte to show the play button, the 'autoplay' atribute
+      it's stablishing that when the web initiates it should play, 'loop' atribute
+      when applied the video will automatically loop.
+      'controls', 'autoplay', and 'loop' are booleans, just by appearing their value is true. 
+    -->
+    <video
+      controls
+      autoplay
+      loop
+      src="/video/ocean_video.mp4"
+      class="download_video"
+    >
+      Your browser doesn't support HTML videos
+    </video>
+
+    <!--
+      To add audio its the same as video, with the same atributes.
+      In this case i dont have audio for the video.
+    -->
+    <audio controls autoplay loop src=""></audio>
+  </body>
+</html>
