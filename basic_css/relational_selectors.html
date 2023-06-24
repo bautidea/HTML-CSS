@@ -4,6 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Relational selectors</title>
+    <link rel="stylesheet" href="/basic_css/css/relational_selectors.css" />
   </head>
-  <body></body>
+  <body>
+    <!--
+      We cant target elements inside one element to style.
+      In this case we are going to slect the <p> element inside the section element.
+      Its a selection based on the relationship between elements.
+    -->
+    <section id="product">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <!--
+        This <p> element inside <article> element will be targeted aswell.
+      -->
+      <article>
+        <p>
+          This paragraph is inside an article element, and its targeted aswell
+        </p>
+      </article>
+    </section>
+
+    <!--
+      To select a specific element inside the father element.
+      Targeting all direct childs of section - product2 element.
+    -->
+    <section id="product2">
+      <p>1st paragraph inside section - product2</p>
+      <article>
+        <p>2nd paragraph inside an article on section - product2</p>
+      </article>
+      <p>Third paragraph in section - product2 but outside the article</p>
+    </section>
+
+    <!--
+      Now if i want to target a element that is siblinng to the father element.
+      in other way, the element that is inmidiatly after 
+    -->
+    <section id="product3">
+      <p>1st paragraph inside section - product3</p>
+      <article>
+        <p>2nd paragraph inside an article on section - product3</p>
+      </article>
+    </section>
+    <p>3rd paragraph right after, outside section - product3</p>
+    <p>4th paragraph after the direct siblinng of element section - product3</p>
+  </body>
+
+  <!--
+    Now im going to target ALL direct siblings.
+  -->
+  <section id="product4">
+    <p>1st paragraph inside section - product4</p>
+    <article>
+      <p>2nd paragraph inside an article on section - product4</p>
+    </article>
+  </section>
+  <p>3rd paragraph right after, outside section - product4</p>
+  <p>4th paragraph after the direct siblinng of element section - product4</p>
+</body>
 </html>
