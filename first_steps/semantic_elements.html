@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+      Semantic containers are more descriprive or meaningful. Wherever posible we 
+      should use these new elements instead of generic containers, because this help
+      search engines to better understand the web pages and what it contain.
+      Lets say i want to represent a blog post.
+      <article> its any independent, self contained piece of content.
+      We can still use the div element.
+    -->
+    <article class="article">
+      <h1>Heading</h1>
+      <p>
+        Published <time datetime="2023-24-01 10:17">june 24 2023 10:17 am</time>
+      </p>
+      <p>
+        <!--
+          <mark> elements used for highlight or mark contenct 
+        -->
+        <mark>Lorem ipsum dolor</mark>, sit amet consectetur adipisicing elit.
+        Sequi dolorum porro, laudantium cumque reprehenderit alias provident
+        dolorem repellat eveniet? Incidunt!
+      </p>
+
+      <!--
+        <figure> makes structure more meaningfull by wraping the img in this elemnt.
+        This element its a container for figures.
+      -->
+      <figure>
+        <figcaption>HTML img on top</figcaption>
+        <img src="/imgs/descarga.jpg" alt="HTML IMG" />
+      </figure>
+      <figcaption>HTML img on bottom</figcaption>
+    </article>
+  </body>
+</html>
