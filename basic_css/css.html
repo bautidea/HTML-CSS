@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <!--
+      We can link our style sheets, this way of providing CSS is called 
+      External stylesheets
+    -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!--
+      Another way of embeding is like we were doing so far, called
+      Embeded stylesheets with the <style> element.
+      This will overwrite the external stylesheet.
+    -->
+    <style>
+      .embeded {
+        color: green;
+      }
+
+      #inline {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="external">Lorem ipsum dolor sit amet.</p>
+    <p class="embeded">Lorem ipsum dolor sit amet.</p>
+    <!-- 
+      We can use inline style to apply style to a particular element. 
+      We should avoid this style as much as posible, because it violate the 
+      "separation of concern" principle.
+    -->
+    <p style="color: blue; font-weight: bold">Lorem ipsum dolor sit.</p>
+    <!-- We can do the same of above like this -->
+    <p id="inline">Lorem ipsum dolor sit.</p>
+  </body>
+</html>
