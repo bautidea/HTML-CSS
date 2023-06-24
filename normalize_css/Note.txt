@@ -1,0 +1,3 @@
+This is used to normalize all HTML files to be able to adapt to all web browsers.
+Check always for new versions. 
+Link --> https://necolas.github.io/normalize.css/

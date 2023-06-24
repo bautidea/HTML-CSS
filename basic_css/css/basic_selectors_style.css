@@ -1,0 +1,64 @@
+/*
+  In CSS we have diferent ways to select elements.
+  Type
+  ID
+  Class
+  Atribute
+*/
+/* Selecting by TYPE */
+body {
+  margin: 10px;
+}
+
+/* Selecting by CLASS */
+.external {
+  color: orange;
+}
+.product {
+  color: red;
+}
+
+/* Selecting by ID */
+#product {
+  color: blue;
+}
+
+/* 
+  Selecting by ATRIBUTE is not realy a good practice, but you can see it on other people code
+  Here we are checking for the existing of the atribute, here we can target a specific atribute
+  like 'a[target="_blank"]' or just the 'a[target]', here we are targetting from anchor element the
+  atribute target.
+*/
+a[target="_blank"] {
+  color: brown;
+}
+
+/*
+  We could also combine multiple conditions.
+*/
+a[target="_blank"][href*="google"] {
+  color: brown;
+}
+/* 
+  We can even target the href atribute. But here we add the '*=' to indicate that the link has to contain
+  the word 'google', because if we dont do this if the link would change then the style wont apply to the 
+  element.
+*/
+a[href*="youtube"] {
+  color: green;
+}
+
+/*
+  We can even see if the atribute starts with a specific value.
+*/
+a[href^="http://f"]
+{
+  color: blueviolet;
+}
+
+/* 
+  If the atribute end with a specific value.
+*/
+a[href$="in.com"] {
+  color: gray;
+}
