@@ -1,0 +1,53 @@
+/*
+  Pseudo classes are not real classes that we define.
+  The rule :first-child is fragile, cus if we move the 1st element that is being
+  targeted, it will lose his style.
+  The same happens if the elemnt change the typw, for example if  from a article we 
+  change to a container <div>, rule will break.
+*/
+article :first-child {
+  font-size: 140%;
+  font-style: italic;
+}
+
+/*
+  First element that appear of each type.
+*/
+article :first-of-type {
+  color: red;
+}
+
+/* First of type paragraph */
+article p:first-of-type {
+  font-size: 130%;
+  color: green;
+}
+
+/*
+  nth-child() its like a function in other progamming languages.
+  I am telling it to target the odd items in the Unordered List.
+*/
+ul li:nth-child(odd) {
+  color: gold;
+  background-color: gray;
+  width: 200px;
+}
+
+/*
+  Targeting the hyperlink, so the color isnt violet.
+  And targetting all anchors <a> that are links.
+*/
+a:visited,
+a:link {
+  color: dodgerblue;
+}
+
+/*
+  hovers activate when the mouse is hovered, but if the element is targeted with
+  the ketboardit wont.
+  So a good practice is to use another pseudo selector :focus.
+*/
+a:hover,
+a:focus {
+  color: deeppink;
+}
