@@ -51,3 +51,14 @@ a:hover,
 a:focus {
   color: deeppink;
 }
+
+.but {
+  color: red;
+  background-color: yellow;
+  padding: 15px;
+  border-width: 0px;
+  transition: opacity 1s;
+}
+.but:hover {
+  opacity: 0.5;
+}
