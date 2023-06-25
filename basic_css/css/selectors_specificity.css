@@ -1,0 +1,53 @@
+/* 
+    So bases on specificity css will target the most specific selector, first will
+    target #id then .class then the element.
+    In this example this sylesheet will target the id form all of this elements.
+*/
+h1 {
+  color: red;
+}
+
+#head1 {
+  color: violet;
+}
+
+.headings {
+  color: blueviolet;
+}
+
+/* 
+  If we want to overpass the default specificity selector. This should be avoided as 
+  much as possible.
+*/
+
+h2 {
+  color: red !important;
+}
+
+#head2 {
+  color: violet;
+}
+
+.headings2 {
+  color: blueviolet;
+}
+
+/* 
+  For more specificity, if you hover over the style element you can see an specificity
+  value like (0,1,0) the higher this value the more specific the selector will be.
+*/
+#head3.headings3 {
+  color: aquamarine;
+}
+
+h3 {
+  color: red;
+}
+
+#head3 {
+  color: violet;
+}
+
+.headings3 {
+  color: blueviolet;
+}
