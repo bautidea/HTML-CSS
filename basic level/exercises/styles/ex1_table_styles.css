@@ -1,0 +1,23 @@
+:root {
+  font-family: arial;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  background-color: #427fef;
+  color: white;
+  border: none;
+  padding: 8px;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eef7ff;
+}
+
+tbody tr {
+  border-block: 1px solid #c4dcf3;
+}

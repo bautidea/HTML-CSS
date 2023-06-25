@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid gray;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+
+      tfoot {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- A table element can be only be used when displaying tabular data. -->
+    <table>
+      <!-- 
+        In a table we have a header <thead>, a body <tbody>, and a footer <tfoot>.
+        <thead> is used to define field names.
+      -->
+      <thead>
+        <!-- to define a row <tr> Table Row-->
+        <tr>
+          <!-- colspan make a cell occupy "2" (in this cas) columns -->
+          <th colspan="2">Country table</th>
+        </tr>
+        <tr>
+          <!-- <th> Table Header, is a header cell. This represents the field name.-->
+          <th>Country</th>
+          <th>OrderID</th>
+        </tr>
+      </thead>
+
+      <!-- <tbody> is used to define data rows. -->
+      <tbody>
+        <tr>
+          <!-- <td> Table Data, are data cells, because they contain data. -->
+          <td>USA</td>
+          <td>1000</td>
+        </tr>
+      </tbody>
+
+      <!-- <tfoot> is used to define a footer-->
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <th>500</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
