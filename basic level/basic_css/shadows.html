@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadows</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background: gold;
+        box-shadow: 0 0 30px grey; /* puting 0 in the move-right and move-down values centers the shadow */
+        margin: 15px;
+      }
+
+      /* Adding shadow to text */
+      .h {
+        color: white;
+        font-family: arial;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* For shadows it is always recommended this color */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1 class="h">Head</h1>
+    </div>
+  </body>
+</html>
