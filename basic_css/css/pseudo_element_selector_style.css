@@ -1,0 +1,41 @@
+/*
+    Pseudo-element selectors are for styling a part of an element, like 
+    the first letter or line of a paragraph.
+*/
+/* Targetting the first letter of the poragraph */
+/* 
+  We target a pseudo-ELEMENTS by using '::'.
+  We target a pseudo-CLASS by using ':'.
+  The differenece is that we use PSEUDO-CLASSES to style elements, and we use 
+  PSEUDO-ELEMENTS to style a PART of an element.
+*/
+p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+  color: red;
+}
+
+p::first-line {
+  color: blue;
+}
+
+p::selection {
+  background-color: pink;
+}
+
+/* To make this selection available to all elements (not just paragraph). */
+::selection {
+  background-color: aquamarine;
+}
+
+/* Here iam inserting content before the content of the <p> element. */
+p::before {
+  content: "...";
+}
+
+p::after {
+  content: "this is p::after, in new block";
+  display: block; /* Changing to a block-element, it will start on a new line and fill the entire line */
+  font-size: 140%;
+  font-family: arial;
+}
