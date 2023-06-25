@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients color</title>
+    <style>
+      /* 
+        Web for gradients - https://cssgradient.io/ 
+        That web will give us the CSS code to generate the selected gradient.
+      */
+      /* Linear Gradients */
+      .box {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(
+          to bottom right,
+          dodgerblue,
+          yellow
+        ); /* Creating gradient */
+        margin: 15px;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(225deg, dodgerblue, yellow);
+        margin: 15px;
+      }
+
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(225deg, dodgerblue, yellow 30%);
+        margin: 15px;
+      }
+
+      .box4 {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(225deg, dodgerblue, yellow, tomato);
+        margin: 15px;
+      }
+
+      /* Radial Gradients */
+      .box5 {
+        width: 400px;
+        height: 200px;
+        background: radial-gradient(black, yellow);
+        margin: 15px;
+      }
+
+      .box6 {
+        width: 400px;
+        height: 200px;
+        background: radial-gradient(circle at top left, black, yellow);
+        margin: 15px;
+      }
+
+      /* with the web site to create gradients */
+      .box7 {
+        width: 400px;
+        height: 200px;
+        background: rgb(34, 193, 195);
+        background: linear-gradient(
+          196deg,
+          rgba(34, 193, 195, 1) 0%,
+          rgba(253, 187, 45, 1) 100%
+        );
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+  </body>
+</html>
