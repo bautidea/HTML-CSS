@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sizing Elements</title>
+    <style>
+      .box {
+        /* width and heigh are applied to the content box */
+        width: 100px;
+        height: 100px;
+        background: gold;
+        /* 
+          if we apply a padding or a margin the box will get bigger, it wont mantain the 100 px. 
+          Any padding will increase the size of the visible box 
+        */
+        padding: 20px;
+        /* Adding border will increase the size but we can change the colour */
+        border: 15px solid gray;
+        /* 
+          Adding margin does not impact in the size of the visible box, it will just move it
+          away rom other boxes.
+         */
+        margin: 20px;
+        /*
+          This is used so the visible box wont change its size, the visual box will mantain the 
+          size specified in width-height. The default the value of this property is 'content-box'.
+        */
+        box-sizing: border-box;
+      }
+
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background: gold;
+        padding: 20px 20px;
+        border: 15px solid gray;
+        margin: 20px;
+      }
+
+      /* 
+        We have an universal selector (it will select all alements, except speudo elements), 
+        so we can stablish that all elements should have a 'box-sizing: border-box', so we dont
+        have to apply it to every element: .
+        This selector should not be used that offten.
+      */
+      *,
+      /* Including the pseudo elements that for default are not included */
+      *::before, 
+      *::after {
+        /* Uncomment to show */
+        /*box-sizing: border-box;*/
+        text-align: center;
+      }
+
+      /* 
+        We use the 'display' property to give inline-elements or span a width and a height.
+        By default for inline-elements and <span> the value of this property is 'inline'.
+        For <div> the default value is 'block'.
+        'inline-block' is the combination of those two. Just like block elements we can give this 
+        elements a width and a hight, and just like 'inline-elements' these elements are NOT inserted
+        in a new line, they are next to each other.
+      */
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background: gold;
+        padding: 20px 20px;
+        border: 15px solid gray;
+        margin: 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This are block-elements they take the whole horizontal space -->
+    <div class="box"></div>
+    <div class="box1"></div>
+
+    <!-- 
+      This are all inline-elements, this elements dont respect the width and hight properties.
+    -->
+    <span class="box">Hello</span>
+    <span class="box">Hello</span>
+
+    <!-- 
+      To give inline-elements a width and a height.
+      Because span elements are inline, if there is no space beetween this elements, they will
+      show next to each other.
+    -->
+    <span class="box2">Hellouuuu</span>
+    <span class="box2">Helouuuu</span>
+  </body>
+</html>
