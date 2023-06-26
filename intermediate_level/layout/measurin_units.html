@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measurement units</title>
+    <!-- 
+      With relative units we can create layout that adjust to screen sized and more scalable.
+      Wich unit to use depends on what problem are you trying to solve. 
+    -->
+    <style>
+      img {
+        width: 500px;
+      }
+      /* 
+        Pixel values are not scalable, they will always have the same size. 
+        For that reason they should not be used for web pages that are responsive to screen sizes.
+        They are good to be used in an element that you dont want the size to vary,
+        for example in a border line.
+      */
+      .box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+        border-top: 3px solid orange;
+        margin: 15px;
+      }
+
+      /* 
+        This uses the 50% of the width of the parent (<body> in this case).
+        Since body is a block level element it occupy the entire size of the window.
+      */
+      .box_percent {
+        width: 50%;
+        height: 100px;
+        background-color: gold;
+        border-top: 3px solid orange;
+        margin: 15px;
+      }
+
+      /*
+        With viewport units, we can size our elements according to the widh of height
+        of the viewport.
+      */
+      .box_viewport {
+        width: 50vw; /* 50% of the widht of the viewport, vw = viewport width */
+        height: 100vh; /* 100% of the hight of the viewport, vh=viewpoer height */
+        background-color: gold;
+        border-top: 3px solid orange;
+        margin: 15px;
+      }
+
+      /*
+        We use relative to the font size units in situatiosn where we want to adjust 
+        the layout according to the font size.
+      */
+      .box_em {
+        /* 
+          10 x font size, since it isnt stablished it will inherit the font size from 
+          parent element (<body>) ot HTML element if the body element doesnt have a font-size stablished.
+          All browsers give 16px as font-size. so 10 x 16px.
+          The problem with this unit is that if we dont have an explicit font-size in this element
+          we have to trace the hierachy to figure out what font-size will be applied to the element.
+        */
+        width: 10em;
+        height: 10em;
+        background-color: gold;
+        border-top: 3px solid orange;
+        margin: 15px;
+      }
+
+      /* 
+        We use 'rem' units based on the problem i described previously.
+        This measurement unit will adjust the size based on the font size
+        of the ROOT element.
+        By default the font-size of the root element as we disscused is 16px.
+      */
+      .box_rem {
+        width: 10rem;
+        height: 10rem;
+        background-color: gold;
+        border-top: 3px solid orange;
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Common Measurement units</p>
+    <img src="/img/measure_units.jpg" />
+
+    <!-- This box will always be the same size -->
+    <div class="box"></div>
+
+    <!-- Relative to the viewport size, using % -->
+    <div class="box_percent"></div>
+
+    <!-- Relative to the viewport size using viewport units -->
+    <div class="box_viewport"></div>
+
+    <!-- Relative to the font size of the element or its father, using em -->
+    <div class="box_em">HI</div>
+
+    <!-- Relative to the font size of the root element, usign rem-->
+    <div class="box_rem">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim,
+      reiciendis!
+    </div>
+  </body>
+</html>
