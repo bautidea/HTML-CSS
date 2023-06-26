@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow</title>
+    <!-- 
+        Dealing with fixed sized elements is that sometime overflow might happen.
+        If you have a container with a fixed size and the content inside that containter 
+        cannot fit the fixed entire content, thats when overflow happens.
+    -->
+    <style>
+      .box_overflow {
+        background-color: aqua;
+        border: 3px solid gold;
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+        margin-left: 50px;
+      }
+
+      /* 
+        We can use the 'overflow' property to control how the overflow should behave.
+      */
+      .box_no_overflow {
+        background-color: aqua;
+        border: 3px solid gold;
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+        margin-left: 250px;
+        overflow: hidden; /* This will hid the content that overflow */
+      }
+
+      .box_scroll_visible_bar {
+        background-color: aqua;
+        border: 3px solid gold;
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+        margin-left: 450px;
+        overflow: scroll; /* This will create a scroll bar, that will always appear. */
+      }
+
+      .box_scroll_invisible_bar {
+        background-color: aqua;
+        border: 3px solid gold;
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+        margin-left: 650px;
+        /* The 'overflow' property has two parameters the first
+          overflow-x this will trigger when overflow is in X axis.
+          overflow-y this will trigger when overflow is in Y axis.
+          If you use only one value, this value will be used for both directions.
+        */
+        overflow: hidden auto; /* This will create a scroll bar, this will activate only if there is extra content on Y axis  */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Lets overflow this container -->
+    <div class="box_overflow">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
+        exercitationem neque, voluptates laudantium delectus illo nihil facere
+        porro quod quasi suscipit harum earum at ducimus sequi aliquid accusamus
+        corrupti sint facilis voluptatem similique. Repudiandae iure iusto eaque
+        inventore molestiae ex necessitatibus distinctio dignissimos sed
+        quibusdam, fuga, nobis amet. Dolorem, atque?
+      </p>
+    </div>
+
+    <div class="box_no_overflow">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+        quibusdam distinctio debitis commodi eveniet omnis cumque quisquam quis
+        mollitia facere nesciunt minus rem molestiae adipisci eum repellat,
+        consectetur maxime quam vero? Hic error perferendis soluta, aut
+        recusandae, rerum dolorem iste autem earum a molestiae fugiat quaerat,
+        ipsam omnis fugit minus.
+      </p>
+    </div>
+
+    <div class="box_scroll_visible_bar">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam quos
+        quisquam provident possimus sunt incidunt sint id optio quasi esse.
+        Repudiandae maxime possimus nostrum minus nobis eum ex eveniet ratione
+        id itaque magnam et quas numquam doloribus, placeat aspernatur quia in
+        ad nesciunt. Amet ducimus nemo expedita voluptas ratione in.
+      </p>
+    </div>
+
+    <div class="box_scroll_invisible_bar">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptate
+        expedita exercitationem provident iure ratione et, esse nam illum quidem
+        excepturi. Provident atque quam deserunt consequatur tenetur distinctio
+        facilis ea fugit quas amet. Quae, numquam? Maxime cumque, tenetur quasi
+        velit omnis exercitationem sapiente voluptatum voluptatem recusandae
+        amet aspernatur aliquid deleniti.
+      </p>
+    </div>
+  </body>
+</html>
