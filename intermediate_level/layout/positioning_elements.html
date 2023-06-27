@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning Elements in HTML</title>
+    <style>
+      /* 
+        To position elements we use the 'position' property. By default the 
+        'position' property value is 'static' which means they are not positioned,
+        they appear in the normal position.
+      */
+      .boxes_r {
+        border: 3px solid gray;
+        margin-bottom: 15px;
+      }
+
+      .box {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .box_1r {
+        background: gold;
+      }
+
+      /*
+        To position the element first we need to change the property to 'relative'.
+        Then using properies like 'top', 'right', 'bottom' and 'left', we can move this box
+        around.
+        With 'relative' position we can move an element relative to its normal position.
+      */
+      .box_2r {
+        background: tomato;
+        position: relative;
+        left: 4rem; /* We can use also negative values just like 'shadow' property' */
+        top: 4rem;
+        /* We use 'z-index' property to move elements back or foward in the screen */
+        z-index: -1;
+      }
+
+      .box_3r {
+        background: dodgerblue;
+      }
+
+      /*
+        Absolute positioning we can position an element relative to its container.
+        First we need to modify the 'position' property of the container to 'relative'.
+        Container MUST have this propery in order to position the element relative to the 
+        container.
+      */
+      .boxes_a {
+        border: 3px solid gray;
+        margin-bottom: 15px;
+        position: relative;
+      }
+
+      .box_1a {
+        background: gold;
+      }
+      /*
+        If you change the element position to absolute, that element is removed from the
+        normal flow of the page, and other elements are renderes as if the absolute position
+        element doesnt exist.
+      */
+      .box_2a {
+        background: tomato;
+        position: absolute;
+        left: 4rem;
+        top: 4rem;
+      }
+
+      .box_3a {
+        background: dodgerblue;
+      }
+
+      /*
+        Relative to viewport, same, we need to inidicate that container has relative positioning
+      */
+      .boxes_rvp {
+        border: 3px solid gray;
+        margin-bottom: 15px;
+        position: relative;
+      }
+
+      .box_1rvp {
+        background: gold;
+      }
+
+      /*
+        And we change the element postioning to fixed
+      */
+      .box_2rvp {
+        background: tomato;
+        position: fixed;
+        top: 0;
+        left: 2rem;
+        right: 2rem;
+        width: auto;
+        z-index: -1;
+      }
+      /* So i can scroll and check that the red box is on the top of the viewport */
+      body {
+        height: 200vh;
+      }
+      .box_3rvp {
+        background: dodgerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes_r">
+      <h1>Relative Positioning</h1>
+      <!-- 
+        Each element can have multiple classes, to declare we separate each class by a space
+        <element class = "class1 class2"> in this case "box" is the first class
+        and "box-n" is the second class.
+      -->
+      <div class="box box_1r"></div>
+      <div class="box box_2r"></div>
+      <div class="box box_3r"></div>
+    </div>
+
+    <!-- Absolute positioning -->
+    <div class="boxes_a">
+      <h1>Absolute Positioning</h1>
+      <div class="box box_1a"></div>
+      <div class="box box_2a"></div>
+      <div class="box box_3a"></div>
+    </div>
+
+    <!-- 
+      Relative to the view port positioning, this is used for elements that should stay in
+      fixed in one place of the view port, for example a navigation bar that always staus on
+      the top.
+    -->
+    <div class="boxes_rvp">
+      <h1>Relative to viewport</h1>
+      <div class="box box_1rvp"></div>
+      <div class="box box_2rvp">Relative to VP</div>
+      <div class="box box_3rvp"></div>
+    </div>
+  </body>
+</html>
