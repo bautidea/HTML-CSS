@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <!--
+        Flexible Box Layout (FlexBox) is a layout method used for laying out elements in one direction.
+        More easy and powerfull than Float.
+        To align items in Flexbox its necessary to understand axes in flex. We have two axes
+        main (or primary) and the cross (or secondary) this depends on the 'flex-direction' property
+        Watch the image shown in the HTML to understand it better.
+        To align items there are two properies that we need to remember 'justify-content'
+        (align along the main axis) and 'align-items' (align along the cross axis).
+    -->
+    <link rel="stylesheet" href="/styles/flexbox.css" />
+  </head>
+  <body>
+    <!--
+      By default this containers will show vertically, to show them horizontally
+      we use flex. A common application of this is in navigation bars.
+    -->
+    <div class="container1">
+      <div class="box">Label A</div>
+      <div class="box">Label B</div>
+      <div class="box">Label C</div>
+    </div>
+
+    <div class="container2">
+      <div class="box">Label A</div>
+      <div class="box">Label B</div>
+      <div class="box">Label C</div>
+    </div>
+
+    <div class="container3">
+      <div class="box">Label A</div>
+      <div class="box">Label B</div>
+      <div class="box">Label C</div>
+    </div>
+
+    <div class="img_flex">
+      <img src="/img/axes_flexbox.jpg" />
+    </div>
+
+    <div class="container4">
+      <div class="box">Label A</div>
+      <div class="box">Label B</div>
+      <div class="box">Label C</div>
+    </div>
+
+    <div class="container5">
+      <div class="box">Label A</div>
+      <div class="box">Label B</div>
+      <div class="box">Label C</div>
+    </div>
+
+    <!-- 
+      Lets check the property 'align-content'
+      For default the content inside a container gets smaller in order to fit in one line,
+      we can change this behavior usign the 'flex-wrap' property.
+    -->
+    <div class="container6">
+      <div class="box">Label A</div>
+      <div class="box">Label B</div>
+      <div class="box">Label C</div>
+      <div class="box">Label D</div>
+      <div class="box">Label E</div>
+      <div class="box">Label F</div>
+      <div class="box">Label G</div>
+      <div class="box">Label H</div>
+      <div class="box">Label I</div>
+    </div>
+
+    <div class="container7">
+      <div class="box">Label A</div>
+      <div class="box">Label B</div>
+      <div class="box">Label C</div>
+      <div class="box">Label D</div>
+      <div class="box">Label E</div>
+      <div class="box">Label F</div>
+      <div class="box">Label G</div>
+      <div class="box">Label H</div>
+      <div class="box">Label I</div>
+    </div>
+
+    <div class="container8">
+      <div class="box">Label A</div>
+      <div class="box">Label B</div>
+      <div class="box">Label C</div>
+      <div class="box">Label D</div>
+      <div class="box">Label E</div>
+      <div class="box">Label F</div>
+      <div class="box">Label G</div>
+      <div class="box">Label H</div>
+      <div class="box">Label I</div>
+    </div>
+  </body>
+</html>
