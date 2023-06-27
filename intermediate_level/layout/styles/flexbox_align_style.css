@@ -13,6 +13,13 @@ img {
   margin-bottom: 15px;
 }
 
+.box {
+  width: 5rem;
+  height: 5rem;
+  background: gold;
+  margin: 1rem;
+}
+
 /* 
   To display the containers horizontally we use the display property with 'flex' 
   value in it. 
@@ -31,12 +38,6 @@ img {
   display: flex;
   flex-direction: column-reverse;
 }
-.box {
-  width: 5rem;
-  height: 5rem;
-  background: gold;
-  margin: 1rem;
-}
 
 /*
   Alignin elements.
@@ -46,7 +47,7 @@ img {
   So to align items vertically we need to give the container a height.
 
   Another thing we can do is to change the alignment of only one item, for that we use the 
-  'align-self' property.
+  'align-self' property. This property is applied on a flex item and not a flex container.
 */
 .container4 {
   display: flex;

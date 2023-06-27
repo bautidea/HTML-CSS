@@ -1,0 +1,31 @@
+.container {
+  border: 3px solid lightgray;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 50vh;
+  align-items: center;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+  background: gold;
+  margin: 1rem;
+  flex-basis: 10rem;
+}
+
+.b1 {
+  align-self: flex-start;
+  flex-grow: 1;
+}
+
+.b2 {
+  align-self: center;
+  flex-shrink: 1; /*This box will shrink less than the others*/
+}
+
+.b3 {
+  align-self: flex-end;
+  flex: 2 2 10px; /*the first value indicates flex-grow, the second is flex-shrink and the las it flex-basis */
+}
