@@ -44,12 +44,19 @@ img {
   element, so by default, its get tall enought to fits its children. So on the ourside this
   element is a block-level element, but on the inside it bhaves according to the flexbox rules.
   So to align items vertically we need to give the container a height.
+
+  Another thing we can do is to change the alignment of only one item, for that we use the 
+  'align-self' property.
 */
 .container4 {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 15rem;
+}
+
+.box1_cont4 {
+  align-self: flex-start;
 }
 
 .container5 {
