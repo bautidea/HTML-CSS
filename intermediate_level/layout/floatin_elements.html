@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating elements</title>
+    <!--
+        Floating elements is another technique for positioning elements and creating layouts.
+        Always after using float we have to clear after otherwise we run into weird layout issues.
+    -->
+    <style>
+      .ex1,
+      .ex2,
+      .tweet1a,
+      .tweet1b,
+      .tweet1c {
+        border: 1px solid gray;
+        margin-bottom: 150px;
+      }
+      /* 
+        Because <p> is a block level element (it starts on a new line), we need it to appear near the img.
+        Here we can see a problem with floats elements called 'parents collapsing', this means that parents 
+        element dont see float elements and they collapse.
+      */
+      .avatar1a {
+        width: 5rem;
+        height: 5rem;
+        background: gold;
+        float: left; /* this will float the avatar element to the left side of its container */
+        margin-right: 10px;
+      }
+
+      /* 
+        To solve the problem with parenting collapsing we have many ways
+        The first is the one in the HTML block, we declare an empty div container.
+        A better aproach is to use pseudo element like here.
+      */
+      .avatar1b {
+        width: 5rem;
+        height: 5rem;
+        background: gold;
+        float: left; /* this will float the avatar element to the left side of its container */
+        margin-right: 10px;
+      }
+      /*
+        We want to insert an element after the content of the tweet, content is empty so it show no
+        content, since this element is an inline element, we display it as a block element so it appears
+        below the .tweet1b element.
+      */
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      /* We create this rule so the 2nd paragraph starts belov the avatar element. */
+      .tweet2 {
+        border: 1px solid gray;
+        margin-bottom: 150px;
+      }
+
+      .avatar2 {
+        width: 5rem;
+        height: 5rem;
+        background: gold;
+        float: left; /* this will float the avatar element to the left side of its container */
+        margin-right: 10px;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="ex1">
+      <article class="tweet1a">
+        <div class="avatar1a"></div>
+        <p>Avatar img is collapsed to the &lt;article&gt; element</p>
+      </article>
+
+      <!-- 
+        Here we are solving the parent collapsing problem by delcaring a empty div container.
+      -->
+      <article class="tweet1a">
+        <div class="avatar1a"></div>
+        <p>Solving parenting collapsing by declaring an empty div container</p>
+        <!-- This div is not meaningful for search engines so its not a really good aproach -->
+        <div class="clear"></div>
+      </article>
+
+      <!--
+        A better aproach is to use pseudo elements, we use the class clearfix.
+      -->
+      <article class="tweet1b clearfix">
+        <div class="avatar1b"></div>
+        <p>Solving parenting collapsing by using pseudo elements</p>
+      </article>
+    </article>
+
+    <article class="ex2">
+      <article class="tweet2">
+        <div class="avatar2"></div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Text with no clear property, appear next to .avatar</p>
+        <p class="clear">Text with clear property, appear below .avatar</p>
+      </article>
+    </article>
+  </body>
+</html>
