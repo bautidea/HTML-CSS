@@ -21,11 +21,14 @@
         We also have 'justify-content' (alignt the grid along horizontal axis) and 'align-content' (align the grid
         along the verical axis) this are used to align the grid inside the container.
 
+        NOTE: a basic rule is that if you see the word 'content' that represents the entire grid (the entire content of
+        the container) and if you see 'items' that represents individual items in the grid.
+
         We can apply a gap between rows and columns, we have three properties for that 'row-gap', 'column-gap', 
         and 'gap' which is the shorthand for the first two properties. 
 
-        NOTE: a basic rule is that if you see the word 'content' that represents the entire grid (the entire content of
-        the container) and if you see 'items' that represents individual items in the grid.
+        For placin items in a grid we have three properties 'grid-row', 'grid-column' and 'grid-area' (shorthand for 
+        grid row and grid column) by setting this properties on an ITEM, we can control where the item should be placed.
     -->
     <link rel="stylesheet" href="/styles/grid_style.css" />
   </head>
@@ -64,6 +67,17 @@
     <div class="container6">
       <div class="box1">A</div>
       <div class="box1">B</div>
+      <div class="box1">C</div>
+      <div class="box1">D</div>
+    </div>
+
+    <!-- 
+      In this container we are changing the items placing. For this we are giving the 1st 
+      box aother class, so we can place ir where we want.
+    -->
+    <div class="container6">
+      <div class="box1 box-one">A</div>
+      <div class="box1 box-two">B</div>
       <div class="box1">C</div>
       <div class="box1">D</div>
     </div>

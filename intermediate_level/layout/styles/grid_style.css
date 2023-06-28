@@ -103,3 +103,19 @@
   /* column-gap: 15px; */
   gap: 10px 15px; /* row-gap first then column-gap */
 }
+
+/* 
+  Here we are conifguring the place of the item. By default each item takes one cell,
+  but if you want an item to take more than cell you should type the start line number
+  followed by a slash and then the end line number. Line number is not the column, to check
+  the line number you should go to dev tools.
+  If you want to fill the entire grid you can use '-1' value.
+*/
+.box-one {
+  grid-column: 1 / -1; /* Since this grid has 3 lines numbers this would be the same as 1 / 3 */
+  /* We can also use the span keyword to specify how many cells this item is going to take */
+}
+
+.box-two {
+  grid-column: 1 / span 2;
+}
