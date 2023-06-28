@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid layout</title>
+    <!-- 
+        We saw that flexbox is really good to lay out elements in a row on a column.
+
+        But to lay out content in both row and columns we use GRID.
+
+        To define a grid first we need a container, and then use the 'display:grid' property,
+        we use 'grid-template-row' and 'grid-template-columns' to define the number and size of
+        rows and columns.
+        
+        To change the alignment of the items in the grid we need to remember two properties
+        'justify-items' (aligning items along the horizontal axis) and 'align-items' (aligning items along
+        the vertical axis), this propeties are applied to the container and will arlign the items
+        inside each block on the grid.
+        
+        We also have 'justify-content' (alignt the grid along horizontal axis) and 'align-content' (align the grid
+        along the verical axis) this are used to align the grid inside the container.
+
+        We can apply a gap between rows and columns, we have three properties for that 'row-gap', 'column-gap', 
+        and 'gap' which is the shorthand for the first two properties. 
+
+        NOTE: a basic rule is that if you see the word 'content' that represents the entire grid (the entire content of
+        the container) and if you see 'items' that represents individual items in the grid.
+    -->
+    <link rel="stylesheet" href="/styles/grid_style.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <div class="container2"></div>
+    <!-- Here is aligned by default. -->
+    <div class="container3">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+    </div>
+
+    <!-- In this container the item are aligned along horizontal axis. -->
+    <div class="container4">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+    </div>
+
+    <!-- Items fill their entire cell in the grid -->
+    <div class="container5">
+      <div class="box1">A</div>
+      <div class="box1">B</div>
+      <div class="box1">C</div>
+      <div class="box1">D</div>
+    </div>
+
+    <!-- 
+      We have been working with cells of same dimension, if we want the columns or rows
+      to have diferent dimensions we use a relative unit called 'fr' fraction.
+      We can also add a gap between columns or rows.
+    -->
+    <div class="container6">
+      <div class="box1">A</div>
+      <div class="box1">B</div>
+      <div class="box1">C</div>
+      <div class="box1">D</div>
+    </div>
+  </body>
+</html>

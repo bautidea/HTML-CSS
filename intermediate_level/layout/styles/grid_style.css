@@ -1,0 +1,105 @@
+.container {
+  display: grid;
+  /* Creating a 3 rows x 2 columns grid */
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px;
+  border: 3px solid gold;
+  margin-bottom: 15px;
+}
+
+/* 
+  We can use the repeat function to creat the grid.
+*/
+.container2 {
+  display: grid;
+  border: 3px solid gray;
+  margin-bottom: 15px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+}
+
+/*
+  We also have the 'grid-template' property thats a short hand for 
+  grid-template-columns and grid-template-rows.
+*/
+.container3 {
+  display: grid;
+  border: 3px solid lightblue;
+  margin-bottom: 15px;
+  grid-template: repeat(2, 100px) / repeat(3, 100px); /* 1st we indicate rows then followed by a slash we indicate columns */
+}
+
+/* 
+  Here we can see how grid order diferent elements, one box in each block of the grid. 
+  By default the items align from top left to bottom right, we can easily align this items
+  along the horizontal or vertical axis.
+*/
+.box {
+  width: 5rem;
+  height: 5rem;
+  background: gold;
+}
+
+/* 
+  Container in which we are changing the default alignment.
+*/
+.container4 {
+  height: 70vh;
+  display: grid;
+  border: 3px solid lightblue;
+  margin-bottom: 15px;
+  grid-template: repeat(2, 100px) / repeat(3, 100px);
+  justify-items: center; /* Aling items along horizontal axis */
+  align-items: center; /* Align items along vertical axis */
+  justify-content: center; /* Align the grid along the horizontal axis */
+  align-content: center; /* Align the grid along the vertical axis */
+}
+
+/*
+  Default values for align and justify items property is 'stretch', this means that
+  the box is going to fill the entire cell, in the previous examples it wasnt happening
+  because the box size was fixed in the rule '.box'.
+  If we change it
+*/
+.box1 {
+  background: lightblue;
+  border: 1px solid black;
+}
+.container5 {
+  height: 70vh;
+  display: grid;
+  border: 3px solid lightseagreen;
+  margin-bottom: 15px;
+  grid-template: repeat(2, 100px) / repeat(3, 100px);
+  /* Since its the defalt value we can comment this and still works */
+  /* align-items: stretch; */ /* box is going to stretch vertically to fit its cell */
+  /* justify-items: stretch; */ /* Box is going to stretch horizontally to fit its cell */
+}
+
+/* 
+  Here we are changing the dimension of each cell in order to have diferent sized of columns and
+  cells. For that we use percentage but they are a bit tricky, because % is based on the width of 
+  the container, so what we need here is a % of the available free space. for that we use the unit 
+  'fr' (it means fraction of the available space) instead of '%'
+*/
+.container6 {
+  height: 100vh;
+  display: grid;
+  border: 3px solid lightcoral;
+  margin-bottom: 15px;
+  /* grid-template: repeat(2, 100px) / 100px 30% 20% 50%; */
+  /* grid-template: repeat(2, 100px) / 100px 30fr 20fr 50fr; */
+  /* 
+    In this next line we are stablishing that the first row has a fixed value
+    and then the second should fill the entire available space using the value 
+    'auto', we also added a footer of 100 px.
+    if we resize the window we can see that the 1st and 3rd row will maintain the 
+    the height of 100px and the 2nd row will adjust to the navigator.
+  */
+  grid-template: 100px auto 100px/ 30fr 70fr;
+
+  /* Here we are adding a gap between rows and columns */
+  /* row-gap: 10px; */
+  /* column-gap: 15px; */
+  gap: 10px 15px; /* row-gap first then column-gap */
+}
