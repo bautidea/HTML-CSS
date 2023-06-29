@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiding Elements</title>
+    <style>
+      /* 
+        We have two properties for hiding an element, its important to undersand 
+        their differences, the first one is 'display' and 'visibility'. 
+        
+        'display' hides the element as is, it was never ther, so the element below him
+        will occupy the space of this hidden element.
+        
+        'visibility' hides the element, but the space that the element occupy remains.
+      */
+      .first {
+        visibility: hidden;
+      }
+
+      .second {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- We have two paragrapth and we want to hide the first one -->
+    <p class="first">First</p>
+    <p>Second</p>
+    <p class="second">hidden Element</p>
+    <p>This should be one line down</p>
+  </body>
+</html>
