@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <!-- 
+        Media queries are used to provide different styles for different devices
+        depending on their features (such as screen size, orientation, and so on).
+        We call this 'Responsive Web Sites' because they response to various screen 
+        sizes.
+    -->
+    <style>
+      img {
+        width: 75vw;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .box {
+        background: gold;
+        padding: 1rem;
+      }
+
+      /* Selecting the 2nd occurance of the class box */
+      .box:nth-last-of-type(2) {
+        background: dodgerblue;
+      }
+
+      /* 
+        Now lets say that at 650px x --- the page reaches a break point (a point when the design
+        in the web starts looking bad because it looses proportion due to windows streching).
+        We take that resolution and apply media queries to fix it.
+        
+        Media query starts with '@media' and then we type our query. Query can have multiple parts
+        with each part we're asking something about the target device.
+        The first part is the type of the device, then followed by an 'and', in parenthesis we type 
+        the second part of the query.
+
+        If the query is true then the styles defined in the curly braces will be applied, otherwise 
+        they are gonna be ignored.
+
+        Then we can define new rules that can overide the previous rules.
+      */
+      @media screen and (min-width: 600px) {
+        .container {
+          flex-direction: row;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        .container {
+          flex-direction: row;
+        }
+
+        .box:nth-of-type(1) {
+          background: lightgreen;
+        }
+      }
+
+      /* 
+        We can also use media queries to target printers
+        'ctrl + p' to test it 
+      */
+      @media print {
+        body {
+          font-size: 12pt;
+        }
+
+        .box {
+          padding: 0.5cm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is what media queries are used for</p>
+    <img src="/img/media_queries.jpg" />
+
+    <!-- 
+      We want to make this boxes to stack when the size of the windows decrease
+      (like on a mobile phone) and to appear next to each other when the size of
+      the web is widder (on web desktop).
+     -->
+    <div class="container">
+      <div class="box">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint,
+          consequatur asperiores ea culpa incidunt dicta doloribus id,
+          accusantium quam, molestiae nostrum assumenda nemo obcaecati quisquam
+          voluptates dolor aspernatur voluptatum aliquam.
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+          deserunt recusandae similique unde facere tempore alias quasi corporis
+          id harum repellendus assumenda? Consectetur magnam aliquam dolor sed
+          nobis minus! Nihil!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
