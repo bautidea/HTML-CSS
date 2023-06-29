@@ -27,8 +27,12 @@
         We can apply a gap between rows and columns, we have three properties for that 'row-gap', 'column-gap', 
         and 'gap' which is the shorthand for the first two properties. 
 
-        For placin items in a grid we have three properties 'grid-row', 'grid-column' and 'grid-area' (shorthand for 
+        For placing items in a grid we have three properties 'grid-row', 'grid-column' and 'grid-area' (shorthand for 
         grid row and grid column) by setting this properties on an ITEM, we can control where the item should be placed.
+
+        Another way to place items is by defining specific areas in out grid and then placing our items in those areas
+        have also two properties for doing this, one is 'grid-template-area' in our container, to define the areas.
+        And then on individual items, we have 'grid-area' to a particular area.
     -->
     <link rel="stylesheet" href="/styles/grid_style.css" />
   </head>
@@ -75,11 +79,21 @@
       In this container we are changing the items placing. For this we are giving the 1st 
       box aother class, so we can place ir where we want.
     -->
-    <div class="container6">
+    <div class="container7">
       <div class="box1 box-one">A</div>
       <div class="box1 box-two">B</div>
-      <div class="box1">C</div>
+      <div class="box1 box-three">C</div>
       <div class="box1">D</div>
+    </div>
+
+    <!-- 
+      In this container we are practicing the 'grid-template-area'
+     -->
+    <div class="container8">
+      <div class="box1 box-one-8">A</div>
+      <div class="box1 box-two-8">B</div>
+      <div class="box1 box-three-8">C</div>
+      <div class="box1 box-four-8">D</div>
     </div>
   </body>
 </html>
