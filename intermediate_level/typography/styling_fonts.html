@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling Fonts</title>
+    <style>
+      /* 
+        We declare the font family in the body element, because it will apply to all the we page, not just only to a single element. 
+      */
+      body {
+        margin: 10px;
+        /* 
+          This is called a Font Stack, it consist of multiple fonts, that the browser will select. 
+          If the first isnt available, it will select the second, and so on.
+        */
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        font-family: Georgia, "Times New Roman", Times, serif; /* This are web-safe fonts because they are available on almost most computers */
+      }
+
+      p {
+        font-weight: 400; /* With this we can set the weight or boldness of the font */
+        font-style: italic; /* Selecting a style */
+        font-size: 1rem;
+        color: #222; /* A good idea is not to use pure black #000 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+      obcaecati, veniam hic corrupti nulla enim, aspernatur eos necessitatibus
+      labore tempora delectus iste dolores nemo amet nihil debitis! Voluptate
+      rem, nam ipsa omnis enim tempora repellendus molestiae obcaecati voluptas
+      similique voluptatum, quod iusto magni, earum consequatur iste. Animi
+      praesentium at vero.
+    </p>
+  </body>
+</html>

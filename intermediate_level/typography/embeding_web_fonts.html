@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embeding Fonts on web pages</title>
+    <!-- 
+        We can find web pages font on:
+        * fonts.google.com
+        * fontsquirrel.com
+        * fonts.com
+        * myfonts.com
+
+        Font files comes in a variety of different formats, TTF, OTF, EOT, WOFF, and WOFF 2.0.
+        For web we are gonna use WOFF and WOFF 2.0 because this formats are more compressed and more efficient,
+        when embedding fonts into web pages you wanna make sure they are small, so they can be downloaded as soon as possible.
+
+        One of the problems with custom fonts is that they user may encounter a FLASH OF UNSTYLED TEXT (FOUT), which means while our browser
+        is downloading the custom font, its going to use a fallback font, and our text may appear unstyled.
+
+        There are techniques that we can use to minimize this problem, but we cannot avoid it.
+    -->
+
+    <style>
+      /* 
+        This rules where copied from the sytlesheet downloaded with the fonts. After copied you need to modify some rules.
+        I changed the font-family name to a more general one.
+      */
+      @font-face {
+        font-family: "opensans";
+        src: url("/embeding_fonts/open-sans/opensans-bold-webfont.woff2")
+            format("woff2"),
+          url("/embeding_fonts/open-sans/opensans-bold-webfont.woff")
+            format("woff");
+        font-weight: bold; /* I change it to bold, because i am representating the bold version of opensans */
+        font-style: normal;
+        /* 
+          To minimize the FOUT problem we tell the browser how it should handle the flash of unstyled text scenario. 
+          'Fallback' is the best approach to solve it. With this we tell the browser to use a fallback font, and 
+          we give it a short window to download and use the custom font, so if the custom font is not downloaded 
+          within that short period, the fallback font is gonna be used.
+        */
+        font-display: fallback; /* To minimize the FOUT problem we tell the browser how it should handle the flash of unstyled text scenario. */
+      }
+
+      @font-face {
+        font-family: "opensans";
+        src: url("/embeding_fonts/open-sans/opensans-regular-webfont.woff2")
+            format("woff2"),
+          url("/embeding_fonts/open-sans/opensans-regular-webfont.woff")
+            format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        margin: 10px;
+        font-family: "opensans";
+      }
+
+      h1 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      p {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1rem;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. A labore,
+      accusantium consequuntur nisi laudantium libero voluptates earum fugiat
+      commodi! Eos laborum aliquam corrupti similique, ut hic omnis modi aut
+      eius doloremque. Voluptas, porro soluta! Modi ullam id tempora expedita
+      maiores quia, earum, placeat sunt, adipisci perspiciatis perferendis
+      doloremque facere ab?
+    </p>
+  </body>
+</html>
