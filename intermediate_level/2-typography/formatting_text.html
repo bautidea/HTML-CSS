@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formatting text</title>
+    <!-- 
+        We are going to see a few properties to formatting text, 'text-align', 'text-indent', 'text-decoration' 
+        (for adding underlines, or line throughs), 'text-transform' (for converting letter to upercase or lowercase),
+        'white-space' (for controlling wrapping column properties), 'column-*' (column properties for creating 
+        multi-column text), and 'direction' (is used in right to left languages).
+    -->
+    <style>
+      p {
+        width: 50ch;
+        text-align: left; /* Is used for controlling the horizontal alignment of our text, left is the default value */
+      }
+
+      /* 
+        p + p, will select a paragraph that comes right after another paragraph, we do this because usually we dont
+        indent the 1st line after a heading.
+      */
+      p + p {
+        text-indent: 1rem; /* For adding indentation on the first line of our text. */
+      }
+
+      /*
+        To trunc a text we need a fixed width, a white-space seted to  'nowrap' (to end with
+        only one line of text), next overflow to 'hidden' (so any extra content will become hidden),
+        and finally we set text-overflow to 'ellipsis', so we get '...' at the end of the first line.
+      */
+      .p2 {
+        text-decoration: line-through;
+        text-transform: capitalize; /* We can transform the text to lower or uppercase */
+        white-space: nowrap; /* Used for controlling wrapping, if we use this value there will be overflowing */
+        border: 3px solid gold;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Its used to handle text overflow */
+      }
+
+      /*
+        We can create multi-column text.
+      */
+      .multicolumn {
+        column-count: 2;
+        border: 3px solid gray;
+        column-gap: 2rem; /* To control the gap between columns. */
+        column-rule: 3px dotted #999; /* We can also add a line between these columns. */
+      }
+
+      /*
+        To change text direction.
+      */
+      .direction {
+        width: 500px;
+        direction: rtl; /* Read text from rtl (Right to Left.) */
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam
+      asperiores magnam dolores libero numquam aut ullam officiis dolore ipsam
+      itaque, eum blanditiis, optio ipsa sit maxime enim dolorum minima dolor ab
+      cum quam. Ullam ipsum molestiae ad sunt. Reprehenderit eius necessitatibus
+      pariatur ipsum, molestias natus quae quibusdam cumque vero.
+    </p>
+    <p class="p2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aperiam
+      asperiores magnam dolores libero numquam aut ullam officiis dolore ipsam
+      itaque, eum blanditiis, optio ipsa sit maxime enim dolorum minima dolor ab
+      cum quam. Ullam ipsum molestiae ad sunt. Reprehenderit eius necessitatibus
+      pariatur ipsum, molestias natus quae quibusdam cumque vero.
+    </p>
+
+    <p class="multicolumn">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+      necessitatibus libero nostrum veritatis at porro magni ad adipisci
+      quibusdam, odio minima animi quisquam ipsum! Suscipit alias
+      exercitationem, dicta eaque optio quos omnis magnam magni quam in! Tempora
+      ab assumenda molestias impedit quidem? Soluta aperiam eveniet, quidem ea
+      ex corrupti vero!
+    </p>
+
+    <p class="direction">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi accusantium
+      earum eligendi maxime nihil. Odit, pariatur minus blanditiis quas quam
+      expedita corporis doloremque delectus nihil minima. Libero sit odit dolore
+      id, quas quae perferendis quibusdam, similique vitae labore delectus
+      voluptates nam hic! Voluptas minima autem a mollitia nihil, blanditiis
+      ratione!
+    </p>
+  </body>
+</html>
