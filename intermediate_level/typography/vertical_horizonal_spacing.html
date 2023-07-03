@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertical Spacing</title>
+    <!--
+      We are going to see two properties for vertical spacing, 'margin', and 'line-heigh'.
+      When placing elements we have to consider the "law of proximity", that says 
+      "objects that are colser are percived to be related".
+
+      For horizontal spacing, we are going to talk about three properties, 'letter-spacing',
+      'word-spacing', and 'width'.
+      The ideal line lenght should be between 50 - 70 characters. To achieve that 
+    -->
+    <style>
+      html {
+        font-size: 100%;
+      }
+
+      body {
+        margin: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 1rem;
+        /* With this property we can adjust the vertical spacing between lines */
+        line-height: 1.5; /* A general rule is to set this to one and a half times the font size */
+        /* With this property we control the space between letters in a text */
+        letter-spacing: 1px; /* When setting letter-spacing, we want to use an absolute unit */
+        word-spacing: 2px;
+      }
+
+      h1 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 4.209rem;
+        margin: 3rem 0 1rem; /*trbl, according to Law of proximity, the top margin should be grater than the bottom margin*/
+      }
+
+      /* Stablishing line lenght */
+      p {
+        /*
+          'ch' is another unit in CSS, which is relative to the width of the zero character.
+          We use 50 because, some characters like 'i' or '1' take less space, so if you have
+          50 zeros. it's roughly equivalent to 60 to 70 characters.
+        */
+        width: 50ch;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis enim
+      atque hic dolores dolor, animi suscipit, repellendus, molestiae expedita
+      quas minus quod ex obcaecati asperiores vitae voluptate fugit. Error illo
+      labore vitae amet dolor dolorem, eum nihil ratione totam voluptatum eius
+      ducimus excepturi obcaecati alias voluptate deserunt animi voluptatem?
+      Iure.
+    </p>
+    <h1>Heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis enim
+      atque hic dolores dolor, animi suscipit, repellendus, molestiae expedita
+      quas minus quod ex obcaecati asperiores vitae voluptate fugit. Error illo
+      labore vitae amet dolor dolorem, eum nihil ratione totam voluptatum eius
+      ducimus excepturi obcaecati alias voluptate deserunt animi voluptatem?
+      Iure.
+    </p>
+  </body>
+</html>
