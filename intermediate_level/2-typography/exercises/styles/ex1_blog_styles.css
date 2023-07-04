@@ -5,7 +5,7 @@ body {
   font-family: "Ysabeau Office", sans-serif;
   font-weight: 400;
   margin: 15px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .container {
@@ -22,31 +22,34 @@ h3 {
 }
 
 h1 {
-  margin: 1rem auto 2rem;
-  font-size: 3.052rem;
+  font-size: 4.209rem;
 }
 
 h2 {
-  font-size: 2.441rem;
-  margin: 2rem auto 1rem;
+  font-size: 3.157rem;
+  margin: 3rem auto 1rem;
 }
 
 h3 {
-  font-size: 1.953rem;
-  margin: 10px;
-  margin: 0rem auto 1rem;
+  font-size: 2.369rem;
+  margin: 2rem auto 1rem;
 }
 
 .lead_paragraph {
   font-style: italic;
+  font-size: 2rem;
 }
 
-ul {
-  margin: 0 auto 2rem;
+ul,
+ol {
+  margin-top: 1rem;
+}
+
+ol li {
+  margin-bottom: 2rem;
 }
 img {
   width: 100%;
   margin: auto;
-  height: 50%;
   border: 1px solid black;
 }
