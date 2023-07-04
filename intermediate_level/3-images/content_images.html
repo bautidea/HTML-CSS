@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content images</title>
+    <!--
+        In HTML we have two types of images, 'content images' and 'background images', now we are going
+        to see content images.
+    -->
+    <style>
+      /* 
+            By seting the image width bigger than the original image, our image will look blurry, because
+            the original image has a size of 400px x 400px, but we are showing it at a much bigger size
+            and we dont have enought pixels or data about those missing details.
+            This is the problem with raster images, SVG files dont have this problem, but it isnt possible
+            to imitate this image using mathematics like SVG.
+        */
+      .meal {
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <img clas="meal" src="/img/meal.jpg" alt="A bowl of salmon and curry" />
+    <!--
+        Sometimes images can be used for decorations.
+        When that is the usecase we should set the 'alt' attribute to an empty string, because
+        if the image wouldnt be loaded the screen readers will read the name of the file instead of 
+        the 'alt' atribute
+    -->
+    <img src="/img/line.jpg" alt="" />
+  </body>
+</html>

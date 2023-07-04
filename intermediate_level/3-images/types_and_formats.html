@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Types and Formats</title>
+    <!-- 
+        In computers we  have two types of images, 'Raster' which are made up of pixels and 
+        'Vector' wich are defined by a set of mathematical vectors, like lines and curves.
+        We use raster images for photos and vector images for simple graphics, icon, logos, etc.
+
+        Raster often comes from cammeras / scanner but they can also be produced by software. Any 
+        extension of JPG, PNG, GIF, etc is essentially a raster. The larger the image the more pixels
+        we need, and that results in a larger file size.
+        In the web we dont wanna serve large images, because downloading them takes time, but we dont 
+        want to server small images because, this images looks blurry if you scale them up.
+
+        Vector images are created in software (like Adobe illustrator for example). The extension of this
+        image is SVG (Scalar Vector Graphics), this graphics are scalable and they always look sharp
+        at any size.
+    -->
+
+    <style>
+      img {
+        width: 50rem;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="/img/raster_vector_img.jpg" />
+    <img src="/img/raster_image_formats.jpg" />
+  </body>
+</html>
