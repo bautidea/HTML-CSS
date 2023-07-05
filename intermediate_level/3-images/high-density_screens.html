@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supporting High-density Screens</title>
+    <!--  
+        WARNING: you only wanna use this technique if you have a beautiful homepage with images 
+        that should look super sharp.
+        Also this technique is for fixed size images (in this example we are displaying a image 
+        with a fixed width of 400 px), to render images at different sizes, depending on the 
+        screen resolution of the device we should use the 'Resolution Switching' technique.
+        
+        Now a days we have a lot of high density screens with more pixels, and that is something
+        we have to take into account when displaying images.
+        The devices these days have a few properties:
+        * Physical resolution: Based on the actual number of pixels on the device. (eg: iphone 4 
+        has a physical resolution of 960 x 640 pixels).
+        * Logical resolution: It's basically how they behave (eg: iphone 4 has a logical resolution
+        of 480 x 320 pixels).
+        * Device Pixel Ratio (DPR): Which is the ratio of physical to logical pixels (Physical / Logical)
+        (eg: iphone 4 has a DPR of 2). But different screens have diferents DPRs.
+
+        A high-density screen is a screen with a DPR greater than 1.
+        CSS is always based on the logical resolution, so when we say 200 px in CSS, we are talking 
+        about the logical resolution.
+
+        There is a problem with this, if DPR is greater than one then each pixel of the image will get
+        rendered, so the image is going to get resized and by scaling it, the image will look blurry.
+        For this image to look sharp we have to provide a second version of this image that is twice as
+        big, and the display it at the original size.
+        We can scale this image using photoshop.
+    -->
+    <style>
+      .meal {
+        width: 400px;
+      }
+
+      .high-density-example {
+        width: 100%;
+      }
+
+      div {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        To provide different versions of this image for high-density screens, we are gonna use
+        'srcset' atribute. With it we can provide a set of sources for different screens, we provide
+        the image we want and then the device pixel ratio. So if the device pixel ratio is 1 the 1st 
+        image is going to be shown.
+    -->
+    <img
+      src="/img/meal.jpg"
+      alt="A bowl of salmon and curry"
+      class="meal"
+      srcset="/img/meal.jpg 1x, /img/meal@2x.jpg 2x, /img/meal@3x.jpg 3x"
+    />
+
+    <img src="/img/meal.jpg" alt="A bowl of salmon and curry" class="meal" />
+
+    <div>
+      <p>The 1st img is showing as 2x pixel scaling</p>
+      <img src="/img/high-density_img.png" class="high-density-example" />
+    </div>
+  </body>
+</html>
