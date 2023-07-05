@@ -1,0 +1,22 @@
+/* We can apply a background image with 'background-image' or 'background' (short hand)
+  properties.
+*/
+body {
+  background: url(../img/bg-sanfrancisco.jpg);
+  background-repeat: no-repeat; /* We use this property to disable the horizontal and vertical repetition of the image */
+  background-position: 0 5rem; /* horizontal vertical - This property is to place or position the background */
+  background-size: 100% 100%; /* width height - If we use 100% to cover the height, the background will disapear
+                                because the body element is a block-level element, and the height of a block-level element
+                                is by default 0. So they get tall enough to fill their content.
+                                We can use 'cover' also to fill the entire background, but this will strech the image
+                              */
+  /* Im going to use more than 100vh so we can scroll through the page */
+  height: 150vh; /* We stablish a height in order to show background in the body element */
+  /* 
+    If we scroll up or down in our page the background will move, we use the followint property 
+    to fix the image so it doesnt move.
+    Also if we would use 'cover' on the 'background-size' property the background will reduce its size
+    because its covering only 100% of the height of the viewport not the 150 that we specified before.
+  */
+  background-attachment: fixed;
+}
