@@ -1,0 +1,53 @@
+/* 
+  WARNING!! : Dont try to combine all your images in a single CSS Sprite. It doesnt make sense for two
+  reasons - 
+  * We dont want to combine big images into a single CSS Sprite will end up with a really large file.
+  * CSS Sprites are not flexible, so if we want to replace one image, we have to regenerate the CSS Sprite
+*/
+.img1 {
+  width: 100%;
+}
+div {
+  width: 100vh;
+  margin: auto;
+}
+
+/* After creating the CSS sprites files we need to copy the styles from the zip file that we downloaded */
+.bg-rocketship {
+  background: url("../img/css-sprite-combined.png") 0px -0px;
+  width: 100px;
+  height: 100px;
+  /* 
+    This property is set to 'inline-block', because we have used a span elements (and they are inline-elements),
+    so we cannot apply a width and height to an inline element unless we set the display to 'inline-block'.
+  */
+  display: inline-block;
+}
+
+.bg-saturn {
+  background: url("../img/css-sprite-combined.png") -100px -0px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.bg-ufo {
+  background: url("../img/css-sprite-combined.png") -200px -0px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.bg-dishes {
+  background: url("../img/css-sprite-combined.png") -300px -0px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.bg-landing {
+  background: url("../img/css-sprite-combined.png") -400px -0px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}

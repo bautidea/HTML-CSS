@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Sprites</title>
+    <!--  
+        CSS Sprites is an optimization technique.
+        One thing that we need to have in mind is that to get each image, on our browser is sending
+        a separate HTTP request to the server. If you have a page with tons of images and millons
+        of concurrent users, all these users are going to send millions of request to our server
+
+        With this technique we can combine all these imges into a single image, and then get that iamge
+        using a single HTTP request. 
+
+        We need to go to http://cssspritestool.com/ ,  if this web might be down just search in google for 
+        'css sprites generator'.
+
+        WARNING!! : Dont try to combine all your images in a single CSS Sprite. It doesnt make sense for two
+        reasons - 
+        * We dont want to combine big images into a single CSS Sprite will end up with a really large file.
+        * CSS Sprites are not flexible, so if we want to replace one image, we have to regenerate the CSS Sprite
+
+        We should use this approach with small images, like logos or icons.
+    -->
+    <link rel="stylesheet" href="/styles/css_sprites_style.css" />
+  </head>
+  <body>
+    <img src="/img/dishes.png" alt="" />
+    <img src="/img/landing.png" alt="" />
+    <img src="/img/rocketship.png" alt="" />
+    <img src="/img/saturn.png" alt="" />
+    <img src="/img/ufo.png" alt="" />
+    <div><img class="img1" src="/img/image_file_browser.jpg" alt="" /></div>
+
+    <!--  
+      To load our CSS Sprites generated image, we are going to add a bounch of span elements with the class
+      that is indicated in our stylesheet (the class name comes by default from the css sprites file).
+      With this new implementation our browser is sending a single HTTP request to the server thats verified.
+    -->
+    <span class="bg-dishes"></span>
+    <span class="bg-landing"></span>
+    <span class="bg-rocketship"></span>
+    <span class="bg-saturn"></span>
+    <span class="bg-ufo"></span>
+    <div>
+      <img class="img1" src="/img/image_file_browser_css_sprites.jpg" alt="" />
+    </div>
+  </body>
+</html>
