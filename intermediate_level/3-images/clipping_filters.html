@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipping</title>
+    <!--
+        In CSS we can easily clip or cut a part of an image. Go to google and search 
+        'css clip generator'.
+
+        We can also apply filter to our images (grayscale, blur, contrast, brightness, etc.)
+        To see all filter funtions just google 'css filter functions'
+    -->
+    <style>
+      /* After we selected our desired shape we copy the css property and paste it here */
+      .meal {
+        clip-path: polygon(
+          0% 20%,
+          60% 20%,
+          60% 0%,
+          100% 50%,
+          60% 100%,
+          60% 80%,
+          0% 80%
+        );
+        /* Grayscale is a function and we can pass it a value or an argument */
+        filter: grayscale(70%);
+      }
+
+      /* We can apply filters when we hover over an image */
+      .meal2:hover {
+        clip-path: polygon(
+          25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%
+        );
+        /* Also we can apply multiple filters */
+        filter: grayscale(80%) blur(3px);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="/img/meal.jpg" alt="" class="meal" />
+    <img src="/img/meal.jpg" alt="" class="meal2" />
+  </body>
+</html>
