@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolution Switching</title>
+    <!-- 
+      NOTE: The best way to decide the sizes and generate image assets is using the following wesite
+      * https://responsivebreakpoints.com/
+      Here we can upload an image and this site will automatically generate our image asset.
+
+      Resolution switching problem is when we want to provide different images sizes for diferent devices.
+      In the prevoius lesson we learn about physical resolution, logical resolution and Device Pixel
+      Ratio (DPR).
+      We also said that for high-density screens the size of the image that is going to get rendered must be
+      fixed, that is because if the image is going to be displayed at the same size across all diveces
+      there is no problem. 
+      However, if we change the size to a relative unit (eg: 100vw or 100% of father element), we are going 
+      to have a problem, because the browser in each device has to resize the image so it takes the 100 % 
+      of the width of the viewport. This rezising operation can be costly to the browser (the larger the 
+      image the costly this operation) because the browser has to load the entire image in the memory
+      in order to resize it, this is the resolution switching problem.
+
+      We want to provide different versions of the image for different screen sized or resolutions, but since 
+      there are so many devices out there, what we can do, is to provide the same image as three different
+      sized and let the browser pick up the best based on the screen resolution and pixel ratio of the device.
+    -->
+    <style>
+      .meal {
+        width: 45vw;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is for supporting high-density screens  -->
+    <img
+      src="/img/meal.jpg"
+      alt="A bow of curry and pasta"
+      class="meal"
+      srcset="/img/meal.jpg 1x, /img/meal@2x.jpg 2x, /img/meal@3x.jpg 3x"
+    />
+
+    <!-- 
+      Now to solve the switch resolution problem, instead of 1x, 2x, and 3x, we
+      are going to supply the actual width of the image.
+      We use the 'w' unit to represent the actual width of the image (the one we 
+      obtained from photoshop).
+    -->
+    <img
+      src="/img/meal.jpg"
+      alt="A bow of curry and pasta"
+      class="meal"
+      srcset="/img/meal.jpg 400w, /img/meal@2x.jpg 800w, /img/meal@3x.jpg 1200w"
+    />
+
+    <!--  
+      Now lets say that on a mobile device we want our image to take the entire
+      width of the page, on a tablet should take half of the page, and on a desktop
+      computer it should take about a third of the page.
+      We could use media queries, but because the width that we applied to the image
+      will impact the browser's decision to pick the right file.
+
+      We are going to use media conditions.
+      * The first says that if the width of the viewport is a maximun of 500 px 
+      (mobile device), then the width image is going to be seted 100vw
+    -->
+    <img
+      src="/img/meal.jpg"
+      alt="A bow of curry and pasta"
+      srcset="/img/meal.jpg 400w, /img/meal@2x.jpg 800w, /img/meal@3x.jpg 1200w"
+      sizes="
+      (max-width: 500px) 100vw, 
+      (max-width: 700px) 50vw, 
+      33vw
+      "
+    />
+  </body>
+</html>
