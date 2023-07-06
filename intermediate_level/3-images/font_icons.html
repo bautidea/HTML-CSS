@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Icons</title>
+    <!-- 
+        We have another way for displaying iconsm, we can use icon fonts. These icon fonts
+        are special fonts.
+        They are so many icon fonts, the most popular one are:
+        * Font Awesome
+        * Ionicons
+        * Material Design Icons
+
+        For this example we went into fontawesome.com and generated a script.
+    -->
+    <script
+      src="https://kit.fontawesome.com/2b71ffd861.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .icon_container {
+        font-size: 2rem;
+        color: dodgerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="/img/icon_fonts.png" alt="" />
+
+    <!--
+      If you look at the name you will notice that:
+      * The first class is fa-solid which is short for 'Font Awsome - Solid'.
+      * The second class is fa-dragon which is short for 'Font Awesome - Dragon'.
+      If we change the word 'dragon' for another icon we want it will display it
+      (eg fa-bell).
+
+      We can also change the size and color of this icon, Font Awesome provides a 
+      number of utility classes, to do this, for example fa-2x, this will make this
+      icon twice as big, relative to the font size of its parent.
+
+      To better control the size of this icon, we can wrap it inside a <span> element, 
+      the icon elemnt will inherit the font size and color properties of its parent.
+    -->
+    <span class="icon_container">
+      <i class="fa-solid fa-dragon fa-2x"></i>
+    </span>
+
+    <!-- 
+      If you dont like to wrap the icon in a <i> element, you can use a <span> element.
+    -->
+    <span class="icon_container">
+      <span class="fa-solid fa-bell fa-2x"></span>
+    </span>
+  </body>
+</html>
