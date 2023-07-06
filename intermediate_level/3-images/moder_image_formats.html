@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Modern Image Formats</title>
+    <!-- 
+      In this lesson we are going to talk about WebP modern image format.
+      To convert images to this modern format we can use, Photoshop (we have to download
+      WebPShop plugin) or we can search for a converter in the internet, one page to use
+      can be cloudconvert.com.
+      Its better to use WebP because the file sizes are a lot smaller, but this format is 
+      not vastly supported, go to caniuse.com to check its support.
+    -->
+  </head>
+  <body>
+    <!-- 
+      There are two ways we can use this image, using the <img> element, however if a user
+      doesnt support this format the image wont be displayed, so if you dont care about Internet
+      Exporer users you can use the <img> element.
+    -->
+    <img src="/img/meal.webp" alt="" />
+
+    <!--  
+      If you want to support internet explorer, or any other browser that don't support these modern 
+      formats, then we would have to use the <picture> element.
+      Each picture can have multiple sources.
+      First we set the type of the image followed by the subtype.
+    -->
+    <picture>
+      <!-- Since we are using the 'srcset' atribute we could pass different versions for high-density screens -->
+      <source type="image/webp" srcset="/img/meal.webp" />
+      <source type="image/jpeg" srcset="/img/meal.jpg" />
+      <!-- 
+        We should always add an image element for two reasons
+        * This si where we're going to type the alternative text.
+        * To support browsers that don't support the <picture> or the <source> element.
+      -->
+      <img src="/img/meal.jpg" alt="A bowl of salmon and curry." />
+    </picture>
+  </body>
+</html>
