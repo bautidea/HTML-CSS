@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creting a Basic Form</title>
+  </head>
+  <body>
+    <!--  
+      We start by creating the <form> element. Inside this form we are gonna have one or more 
+      <input> fields, called 'form controls'.
+    -->
+    <form>
+      <!-- 
+        Each input has a type. If we set the type to 'text', we get a senior line text field.
+        Before each input field we want to have a lable, we create it using the <label>
+        element.
+        This both elements will laid horizontally because <label> is an inline-element. This element
+        has a 'for' attribute, with it we can associate this label with the input field below.
+        To do that we give an unique identifier (id) to the input field.
+
+        We wrap this two elements with a div in order for them to display one below the other.
+      -->
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" />
+      </div>
+
+      <!--  
+        Here we change the type attribute of the input field to 'email', by doing this we will get
+        basic validation in this field
+      -->
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
+
+      <!-- 
+        Adding the submit button. Each <button> element has a type, in which we indicate the button action.
+      -->
+      <button type="submit">Register</button>
+      <button type="reset">Clear</button>
+    </form>
+  </body>
+</html>
