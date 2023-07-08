@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop-down List</title>
+  </head>
+  <body>
+    <form>
+      <!-- 
+        We use <select> to create a drop-down list, and with <option> we create 
+        possible options to select, the first <option> element will show 1st when
+        loading the page, so you shold type a message there.
+        We can associate a value to these <option> elements, they are the values
+        that eventually will be send to the server when the user submits this 
+        form.
+      -->
+      <select>
+        <option value="">Select a Course...</option>
+        <option value="1">HTML</option>
+        <option value="2">CSS</option>
+        <option value="3">JavaScript</option>
+      </select>
+
+      <!--
+      Sometimes when loading a form, perhaps we want select a option by default,
+      to do that we simply apply the 'selected' boolean attribute.
+      -->
+      <select>
+        <option value=""></option>
+        <option value="1" selected>HTML</option>
+        <option value="2">CSS</option>
+        <option value="3">JavaScript</option>
+      </select>
+
+      <!--  
+        We can also allow the user to select multiple options, for that, in the
+        select element, we apply the 'multiple' boolean attribute.
+      -->
+      <select multiple>
+        <option value="1">HTML</option>
+        <option value="2">CSS</option>
+        <option value="3">JavaScript</option>
+      </select>
+
+      <!--  
+        If you have too many options in a drop-down list its good to categorize 
+        them. To do that we can use the 'optgroup' (option group) element.
+        Each group should have a label
+      -->
+      <select>
+        <optgroup label="Front-end Courses">
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">JavaScript</option>
+        </optgroup>
+        <optgroup label="Back-end Courses">
+          <option value="1">Node.js</option>
+          <option value="2">ASP.net</option>
+          <option value="3">Django</option>
+        </optgroup>
+      </select>
+    </form>
+  </body>
+</html>
