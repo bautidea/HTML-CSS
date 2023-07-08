@@ -4,6 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text Fields</title>
+    <!--  
+      To see all inputs types that are out there, we can search in google for 
+      'HTML input element' 
+      A good page is - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+    -->
+
+    <!-- Using Miligram CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+
+      /* To stop the <textarea> resizing property */
+      textarea {
+        resize: none;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <form>
+      <!-- This input field will only show numbers. -->
+      <input type="number" />
+      <!-- This input field is for text. -->
+      <input type="text" />
+      <!-- To mask what we type -->
+      <input type="password" />
+      <!-- Date field -->
+      <input type="date" />
+      <!-- With email type the user has to type a valid email. -->
+      <input type="email" />
+
+      <!--  
+        If you want to type multiple lines of text, we'll have to use a <textarea> element.
+
+        <textarea cols="30" rows="10"></textarea>
+
+        By default textarea comes with the atributes, 'cols="30"' (which represents the number of columns 
+        or caracters in a line) and 'rows="10"' (which represents the number of lines).
+        But when using Milligram if we change the number of this attributes ('cols' and 'rows'),
+        we are not going to see any differences, because of the hight milligram applies to this
+        input field. 
+        We can change that using CSS. For this demo im going to delete this attributes.
+      -->
+      <textarea></textarea>
+
+      <!--  
+        The input fields have a few attributes that we need to be familiar with.
+        * 'value' - we can use this to prepopulate an input field.
+        * 'placeholder' - is used to show text that when you start typing in the input field
+        it disappear.
+        * 'readonly' - With this the user cannot change value of this input field.
+        * 'disabled' - With this we cannot even select the input that the attribute is associated to.
+        When submitting the form, this value will not be sent to the server, thats the difference 
+        between 'readonly' and 'disabled'.
+        * 'maxlength' - Its used for validation. Depending in the value its setted, the user can only
+        type characters up to the value that it was specified.
+        * 'autofocus' - When the page loads, the first input field with this attribute gets automatically
+        focused (useful for log-in and registration forms).
+      -->
+      <input type="email" value="programming@program.com" />
+      <input type="email" placeholder="programming@program.com" />
+      <input type="text" value="You can't change this" readonly />
+      <input
+        type="text"
+        maxlength="5"
+        placeholder="You cant type more than 5 chars"
+      />
+      <input
+        type="text"
+        placeholder="Automatically focused when reloading"
+        autofocus
+      />
+
+      <!-- 
+        If we want to prepopulate a <textarea> element we need to write inside this element, because
+        it doesnt have the 'value' attribute.
+      -->
+      <textarea>Prepopulating</textarea>
+    </form>
+  </body>
 </html>
