@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data List</title>
+    <!-- 
+        With data list we can implement a suggestion list.
+        One thing to be aware off is that, how the list looks and feels  depends
+        on the browser, if we want to make sure that the sugestion list looks 
+        consistent across diferent browsers we have to style it ourselves, using
+        JavaScript.
+
+        Because if we define a rule in CSS for our <datalist> or <option> element
+        the styles defined there wont be applied, the browsers default size will
+        take over.
+
+        Working example - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <form>
+      <!--  
+        With a simple text field, we want to provide a list of suggestions when 
+        the user types something into this text field.
+      -->
+      <input type="text" list="countries" />
+      <!--  
+        After this input field, we defina a <datalist> element, inside it we can 
+        a bounch of options. We want to assosiate this data list with the input 
+        field, on the <input> we set the 'list' attribute, to associate the two
+        elements.
+      -->
+      <datalist id="countries">
+        <!--  
+          One thing we want to take into consideration is that when we want to 
+          send a numeric value to the server (we could have a database, with 
+          a list of countries, and each country is gonna have a unique id), so
+          when submitting this form, we want to send a unique id, so we know what
+          country the user has selected.
+          We set this using the 'value' attribute, but if we only use this, that
+          value is going to be displayed on the input field.
+          We dont want to show the user this value, we can hide it, by using
+          a 'data' attribute. In HTML if we type the type 'data-', we can create
+          our own custom attribute, and with JavaScript we can read the value
+          of this attribute and submit it to the server.
+
+          Another thing to consider is that when we are working with suggestion
+          lists, we want to turn off the autocomplete feature of the browser.
+          So if the user has previously typed something in this textbot, we 
+          dont want an extra tooltip or autocomplete in this value.
+          For this we set the 'autocomplete' attribute to 'off', this will
+          turn off the native autocomplete feature in the browser.
+        -->
+        <option value="1" autocomplete="off">Australia</option>
+        <option data-value="2">Canada</option>
+        <option>India</option>
+        <option>United States</option>
+      </datalist>
+    </form>
+  </body>
+</html>
