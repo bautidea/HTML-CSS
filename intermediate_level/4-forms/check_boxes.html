@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Boxes</title>
+    <!-- Milligram framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <!-- 
+        To display check-boxes, we need an <input> element with the 'checkbox' 
+        type, followed by a <label> element, and associate the label with the
+        input.
+
+        You will see that Milligram turns the <label> element as an block-level
+        element, to change this and put it right next to the check box we have 
+        to use a utility class.
+
+        Most of the time we want to wrap these two elements inside a container
+        like <div>, so we can stack them vertically.
+
+        If you want to check a box by default we can apply the 'checked' attribute.
+
+    -->
+    <form>
+      <div>
+        <input type="checkbox" id="front-end" checked />
+        <label class="label-inline" for="front-end">Front-end</label>
+      </div>
+      <div>
+        <input type="checkbox" id="back-end" />
+        <label class="label-inline" for="back-end">Back-end</label>
+      </div>
+      <div>
+        <input type="checkbox" id="full-stack" disabled />
+        <label class="label-inline" for="full-stack">Full stack</label>
+      </div>
+    </form>
+  </body>
+</html>
