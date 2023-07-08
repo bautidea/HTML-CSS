@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Frameworks</title>
+    <!--  
+      As we saw styling forms can be a time consuming work, this is why people use 
+      CSS frameworks. A framework is essentially a library of code (CSS code 
+      in this case) that we can reuse to build beautiful modern looking websites.
+
+      For a lot of websites, most of the components that bootstrap has to offer and 
+      having heavy loading css.files its not good or necessary. Then you might want 
+      to use one of the minimalistic frameworks like Miligram.
+
+      You can get it from - https://milligram.io/
+
+      We can also load miligram from a Content Delivery Network (CDN).
+    -->
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    >
+  </head>
+  <body>
+    <!--  
+      Right out of the box you can see a really nice style.
+    -->
+    <form>
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
+
+      <button type="submit">Register</button>
+      <button type="reset">Clear</button>
+    </body>
+  </form>
+</html>
