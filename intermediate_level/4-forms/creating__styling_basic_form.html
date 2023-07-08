@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creting a Basic Form</title>
+    <!-- Styling Fonts -->
+    <link rel="stylesheet" href="/styles/styling_fonts.css" />
   </head>
   <body>
     <!--  
@@ -21,7 +23,7 @@
 
         We wrap this two elements with a div in order for them to display one below the other.
       -->
-      <div>
+      <div class="form_group">
         <label for="name">Name</label>
         <input id="name" type="text" />
       </div>
@@ -30,7 +32,7 @@
         Here we change the type attribute of the input field to 'email', by doing this we will get
         basic validation in this field
       -->
-      <div>
+      <div class="form_group">
         <label for="email">Email</label>
         <input id="email" type="email" />
       </div>
