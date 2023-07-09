@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radion Buttons</title>
+    <!--  
+        With checkboxes the user can select multiple options, but with Radio 
+        Buttons we limit the user to select only a single option (we can use
+        checkboxes also).
+    -->
+    <!-- Milligram -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <!--  
+        We define an input of type 'radio', the 'name' attribute is used for
+        grouping multiple radio buttons.
+        We can use also the 'checked' attribute to pre-select a radio button.
+    -->
+    <div>
+      <input type="radio" name="membershit" id="silver" />
+      <label for="silver" class="label-inline">Silver</label>
+    </div>
+
+    <div>
+      <input type="radio" name="membershit" id="gold" checked />
+      <label for="gold" class="label-inline">Gold</label>
+    </div>
+  </body>
+</html>
