@@ -15,9 +15,9 @@ label {
 
 /* 
   Styling <input> element, as we know we have different types of inputs fields 
-  (checkboxes, radiobutton, etc.) in this lesso we used single line 'text' field 
-  and 'email' fields. So having this in mind we dont want to blindly apply the
-  rule for all kinds of input fields, we wanna apply this only to text fields.
+  (checkboxes, radiobutton, etc.). With this in mind we dont want to blindly 
+  apply the rule to all kinds of input fields, we wanna apply this only to 
+  text fields.
 
   This is where we can use an 'attribute selector', to do so, after the element
   (no space) we open square brackets and type an attribute.
