@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hidden Fields</title>
+    <!--  
+        Hidden fiels are a type of <input> element, it is an invisible element
+        that is used to send data to a server, in this case when loading a form
+        the information on the 'value' attribute will be sended to a server.
+
+        Even though they are invisible to the user, we should never store 
+        sensitive values in them, because we can always find these values
+        in the source code of the page.
+
+        Hidden fields are often used for storing the ID if the content being 
+        edited.
+    -->
+  </head>
+  <body>
+    <form>
+      <input type="hidden" name="course-id" value="1234" />
+    </form>
+  </body>
+</html>
