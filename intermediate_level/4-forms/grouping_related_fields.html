@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grouping Related Fields</title>
+    <!--  
+      As our forms get more and more complex, we need to group these related
+      fields into logical containers. This is where we use the <fieldset>
+      element.
+    -->
+  </head>
+  <body>
+    <form>
+      <!--  
+        Inside the <fieldset> element, we add a <legend> element, thats the label
+        for our group.
+        In this section, we can have one or more input fields.
+      -->
+      <fieldset>
+        <legend>Billing Address</legend>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment</legend>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </fieldset>
+
+      <!--  
+        Another valid approach to group related fields, is to use the <section>
+        element, and an <h2> element as a legend.
+      -->
+      <section>
+        <h2>Payment</h2>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </section>
+    </form>
+  </body>
+</html>
