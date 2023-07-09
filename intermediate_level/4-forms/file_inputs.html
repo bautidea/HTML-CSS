@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Files Inputs</title>
+  </head>
+  <body>
+    <!--  
+      We have an input of type 'files', there are some attributes we need to know 
+      about 'files' input type:
+      * 'multiple' - if you apply this the user can select multiple files.
+      * 'accept' - With this we can limit the kind of files the user can select,
+      if we allow multiple file types, we need to separate them using a ',',
+      we can allso use 'image/*', 'audio/*', 'video/*' to accept any iamage types files.
+    -->
+    <input type="file" />
+    <input type="file" multiple accept=".jpg, .png" />
+    <input type="file" multiple accept="image/*" />
+  </body>
+</html>
