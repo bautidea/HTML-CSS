@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Validation</title>
+    <!--  
+      Before submiting a form, we should always validate the data and make
+      sure its in the right shape. For exampel if you have required fields, 
+      you want to make sure that they are filled out, if you have email 
+      addresses you want to make sure that its a right address, etc.
+
+      We should always validate the data to prevent data corruption or 
+      security atacks.
+
+      HTML elements come with built in validation, we can perform basic
+      checks, but for anything more complex, we have to use JavaScript.
+    -->
+  </head>
+  <body>
+    <!-- 
+      To use the built in validation in HTML elements, we use the 'require'
+      boolean attribute.
+      We can set the minum characters to type with 'minlenght'.
+      Similarly we have 'maxlenght', a good rule if to always use maxlenght
+      to prevent people from entering really long strings.
+
+      For email and date fields, the validation comes by default, the user
+      must enter valid strings.
+
+      For numbers we have two other attributes, 'min' and 'max', we should 
+      always validate number fields, so we dont get negative or long numbers
+      values, they could cause data corruption.
+    -->
+    <form>
+      <input type="text" required minlength="3" maxlength="10" />
+      <input type="email" required />
+      <input type="date" required />
+      <input type="number" min="0" max="5" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
