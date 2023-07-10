@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submitting the form</title>
+    <!--  
+      For submitting the form there are two attributes that we need to know.
+      * 'action' - is where we are going to send the data, here we have to
+      type a relative or an absolute URL, this is where you use back-end
+      language or frameworks.
+      * 'method' - With can either be 'GET' or 'POST'. its basically how 
+      we are sending the data. 
+      With 'POST' method form data is included in the body of the request.
+      With 'GET' method, form data is included in the URL as query string
+      parametrers.
+      'GET' is used when we need to enable bookmarking pages, and 'POST' is 
+      used when we need to uptade the data.
+
+      To submit a form each <input> should have a name attribute.
+
+      For this example we are going to use formspree.io/forms. In this web
+      site we can create a project and in each project we can have one or 
+      more forms. We just copy the URL this page give us and we paste it in
+      the 'action' attribute.
+    -->
+  </head>
+  <body>
+    <form action="https://formspree.io/f/xaygybzv" method="POST">
+      <input type="text" placeholder="Name" name="name" />
+      <input type="email" placeholder="Email" name="email" />
+      <button type="submit">Submit-btn</button>
+      <!--  
+        There is another way of creating a submit button, we can add an input
+        of type 'submit'.
+        The difference is that with the input element, we can only type plain
+        text, we can not add an icon, if you want to add an icon we have to
+        use the <button> element.
+      -->
+      <input type="submit" value="Submit-input" />
+    </form>
+  </body>
+</html>
