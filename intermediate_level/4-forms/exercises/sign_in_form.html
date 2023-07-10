@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in form</title>
+    <link rel="stylesheet" href="/exercises/styles/sign_in_form.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>Please sign in</h1>
+      <form action="https://formspree.io/f/xaygybzv" method="POST">
+        <input
+          type="email"
+          name="acc-email"
+          id="acc-email"
+          placeholder="Email address"
+          autofocus
+        />
+
+        <input
+          type="password"
+          name="acc-password"
+          id="acc-password"
+          placeholder="Password"
+        />
+
+        <div class="checkbox_container">
+          <input type="checkbox" name="remember-check" id="remember-check" />
+          <label for="remember-check">Remember me</label>
+        </div>
+
+        <div class="btn_container">
+          <button type="submit">Sign in</button>
+        </div>
+      </form>
+
+      <p>Copyright &#169; 2020</p>
+    </section>
+  </body>
+</html>
