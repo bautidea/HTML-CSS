@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformations</title>
+    <!--  
+        In CSS we have a bounch of functions for transforming elements
+        * rotate() - to rotate elements.
+        * scale() - for making an element larger or smaller.
+        * skew() - for tilting them to the left or right.
+        * translate() - for positioning on the screen.
+    -->
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: gold;
+        margin: 0 1rem;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      /*
+        We are going to apply the transformation on the hover effect to see
+        things clearly.
+      */
+      .b1:hover {
+        transform: rotate(-15deg);
+      }
+
+      .b2:hover {
+        transform: scale(1.5);
+      }
+
+      .b3:hover {
+        transform: skew(-20deg);
+      }
+
+      /* 
+        You might be wonderging why we use translate() if we can use absolute
+        or relative positioning, there are two reasons.
+        The first is that is easyer to use the 'translate()' function, if you
+        want to use relative or absolute positioning, we would have to set the
+        position to relative, and the use the properties 'top', 'left', 'bottom'
+        and 'right' to move it.
+        The second reason is that this function uses hardware acceleration, so
+        we get better perfomance.
+      */
+      .b4:hover {
+        transform: translate(10px, 10px);
+      }
+
+      /*
+        We can also combine this transformations, the order of the functions 
+        matter. In this case first we are moving the element and the rotating 
+        it.
+      */
+      .b5:hover {
+        transform: translatex(50px) rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box b1">b1</div>
+    <div class="box b2">b2</div>
+    <div class="box b3">b3</div>
+    <div class="box b4">b4</div>
+    <div class="box b5">b5</div>
+  </body>
+</html>
