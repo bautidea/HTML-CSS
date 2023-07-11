@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reusable Animations</title>
+    <!--  
+      If we have different elements and we want to apply the same animation to
+      all elements, we dont want to apply the properties in all elements multiple
+      times.
+
+      To create reusable animations first we need to create a new class in which
+      we use all the animation properties.
+
+      if you go to - animate.style - we get a bunch of beautiful and reusable 
+      animations.
+    -->
+
+    <!-- Conecting to animate.style with CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      /* First we create the animation */
+      @keyframes pop {
+        0% {
+          transform: scale(1);
+        }
+
+        25% {
+          transform: scale(1.3);
+        }
+
+        50% {
+          transform: rotate(45deg);
+          background: tomato;
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        background: gold;
+        line-height: 100px;
+        text-align: center;
+        margin: 1rem 1rem;
+      }
+
+      /* 
+        Anytime we have an element that we need to animate we simply apply our 
+        animation class.
+      */
+      .animation-pop {
+        animation-name: pop;
+        animation-duration: 4s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        animation-direction: alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box animation-pop">b1</div>
+
+    <!--  
+      In this box we are going to use the animations from animate.style.
+      To apply the animation there are two classes we need to apply our elements,
+      the first class 'animate__animated' is general for all animations, the 
+      second class 'animate__bounce' determines the type of animation to use.
+    -->
+    <div class="box animate__animated animate__bounce">b2</div>
+  </body>
+</html>
