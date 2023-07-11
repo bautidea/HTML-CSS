@@ -15,7 +15,10 @@
           name="acc-email"
           id="acc-email"
           placeholder="Email address"
+          minlength="5"
+          maxlength="255"
           autofocus
+          required
         />
 
         <input
@@ -23,6 +26,9 @@
           name="acc-password"
           id="acc-password"
           placeholder="Password"
+          minlength="5"
+          maxlength="255"
+          required
         />
 
         <div class="checkbox_container">
@@ -30,9 +36,7 @@
           <label for="remember-check">Remember me</label>
         </div>
 
-        <div class="btn_container">
-          <button type="submit">Sign in</button>
-        </div>
+        <button type="submit">Sign in</button>
       </form>
 
       <p>Copyright &#169; 2020</p>

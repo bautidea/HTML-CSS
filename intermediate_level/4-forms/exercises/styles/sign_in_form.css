@@ -20,20 +20,68 @@ h1 {
   margin-bottom: 1.25rem;
 }
 
-input[type="email"],
-input[type="password"] {
-  display: block;
-  width: 100%;
-  margin-bottom: 0.75rem;
+p {
+  color: rgba(128, 128, 128, 0.804);
 }
 
+/* 
+  The default box-sizing for input fields is content-box. So, any padding we apply to an input 
+  field, increases its width. To ensure that input fields and buttons have the same width, we need
+  to set box-sizing to border-box. 
+*/
+input {
+  box-sizing: border-box;
+}
+
+input[type="email"],
+input[type="password"] {
+  text-align: center;
+  width: 100%;
+  margin-inline: 0;
+  display: block;
+  margin-bottom: 0.75rem;
+  border: 0.25rem solid #ced4da;
+  outline: 0;
+  padding: 0.75rem 0;
+  border: 0.1rem solid #ced4da;
+  border-radius: 0.5rem;
+  transition: border-color 0.15s, box-shadow 0.25s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0.25rem 0.25rem #b9d3fa;
+  outline: 0;
+}
+
+label {
+  font-weight: 500;
+}
+
+button {
+  height: 4.5rem;
+  padding: 0;
+  width: 100%;
+  border-radius: 2.25rem;
+  border: 0;
+  outline: 0;
+  background: #0d6efd;
+  color: whitesmoke;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: #5898f8;
+}
 .container {
-  width: 20rem;
+  width: 25rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 300px;
 }
 
 .checkbox_container {
@@ -42,10 +90,4 @@ input[type="password"] {
   justify-content: center;
   align-items: center;
   margin-bottom: 0.75rem;
-}
-
-.btn_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
