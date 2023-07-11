@@ -7,8 +7,68 @@
     <!--  
       We can use the 'transition' property to animate one or more properties, we 
       apply this property to the container not to the hover state.
+
+      As we said earlyer the 'transition' property is suitable for really 
+      simple animations, for anything more complex, we'll have to use the 
+      'animate' property.
+
+      For example what if we want to apply multiple transformations, and then
+      control the timiing or speed of each transformation, with 'transition'
+      we have a single place to do this (inside this property).
+      Here is when we need to create a custom animation.
     -->
     <style>
+      /*
+        We are gonna start by defining a bunch of keyframes. CSS animations
+        can have several frames.
+        The key frame is followed by the name of the animation that we want 
+        to create, and then in that block, we define our keyframes. For each
+        keyframe we specify a percentage of the time though the animation 
+        sequence.
+
+        '0%' represents the 1st frame, and 100% is the last frame. You can space
+        the keyframes like you want to.
+
+        After creating the animations on each keyframe we have to assign it 
+        to the element.
+      */
+      @keyframes pop {
+        0% {
+          transform: scale(1);
+        }
+
+        25% {
+          transform: scale(1.3);
+        }
+
+        50% {
+          transform: rotate(45deg);
+          background: tomato;
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      /*
+        First we assign the keyfram using the property 'animation-name', then
+        we stablish a duration with 'animation-duration'. 
+        Properties we need to know.
+        * 'animation-delay' - time to wait before the animation starts.
+        * 'animation-iteration-count' - we can specify how many times we want
+        to run the animation, default value is 1,but we can say 'infinite' if 
+        we want to create a loop
+        * 'animation-timing-function' - determines the animation progression
+        over time.
+        * 'animation-direction' - the default value is 'normal' which plays
+        the animation from start to end. But we can change the animation to 
+        'reverse', to start from the end. Also we can use 'alterante' to
+        alternate between normal and reverse.
+
+        We also have a shorthand property, if you type 'ani' and see on VScode
+        recomendations, and press enter in the 1st recomendation.
+      */
       body {
         display: flex;
         flex-direction: row;
@@ -24,16 +84,18 @@
         line-height: 100px;
         text-align: center;
         margin: 1rem 1rem;
-        transition: transform 0.5s, background 0.5s;
-      }
-
-      .b1:hover {
-        transform: rotate(45deg);
-        background: dodgerblue;
+        animation-name: pop;
+        animation-duration: 4s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        animation-direction: alternate;
+        /* By typing ani and selectin enter */
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
       }
     </style>
   </head>
   <body>
-    <div class="box b1">b1</div>
+    <div class="box">b1</div>
   </body>
 </html>
