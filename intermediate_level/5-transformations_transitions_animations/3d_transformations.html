@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Transformations</title>
+    <!-- 
+      Now we are going to talk about dimensional transformation.
+      We can move this box along the axis-z, so we can move an element closer
+      of further from us.
+    -->
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        background: gold;
+        line-height: 100px;
+        text-align: center;
+        margin: 1rem 1rem;
+      }
+
+      /*
+        Before calling the translateZ() function, we have to use 'perspective'
+        function to define a virtual space. The value we pass is going to 
+        indicate the distance betweeen us and the box, this is just an
+        arbitrary value, it doesnt matter what we pass.
+      */
+      .b1:hover {
+        transform: perspective(200px) translateZ(-50px);
+      }
+
+      /*
+        We can rotate the element along the the vertical axis. You will see
+        that by default the rotation point of the element is at the center,
+        but we can easily move the origin of transformation, with the property
+        'transform-origin', we have to use two values, one for the x offset
+        and the other for the Y. If we use '0 0' it means top left corner
+        of the box.
+      */
+      .b2:hover {
+        transform: perspective(200px) rotateY(45deg);
+        transform-origin: 0 50%;
+      }
+
+      /*
+        Lets say we want to transform the two b3 boxes a a whole, for that
+        we need to wrap this boxes inside a container, and we apply these
+        transformation to it.
+      */
+      .cont:hover {
+        transform: perspective(200px) rotateY(45deg);
+        transform-origin: 0 50%;
+      }
+
+      /* 
+        If we want to apply different transformations to different elements
+        in the container, we apply the transformation to individual elements
+        inside this container.
+        With this implementation, each box will get its own perspective, to
+        get this more real, we want to make sure that all these elements share
+        the same perspective.
+        So we need to define a rule to the container before applying these
+        transformations to the individual elements.
+
+        NOTE: in CSS we have a perspective function that we apply as part of
+        a transformation. But we also have a property, which we apply to the 
+        parent or a container element.
+      */
+      .cont2 {
+        perspective: 200px;
+      }
+
+      .cont2:hover .b4 {
+        transform: rotateY(45deg);
+        transform-origin: 0 50%;
+      }
+
+      .cont2:hover .b4-bis {
+        transform: rotatex(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box b1">b1</div>
+    <div class="box b2">b2</div>
+
+    <div class="cont">
+      <div class="box b3">b3</div>
+      <div class="box b3">b3-bis</div>
+    </div>
+
+    <div class="cont2">
+      <div class="box b4">b4</div>
+      <div class="box b4-bis">b4-bis</div>
+    </div>
+  </body>
+</html>
