@@ -3,13 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transitions</title>
+    <title>Animations</title>
     <!--  
       We can use the 'transition' property to animate one or more properties, we 
       apply this property to the container not to the hover state.
-
-      NOTE: The 'transition' property is suitable for really simple animations,
-      for anything more complex, we'll have to use the 'animate' property.
     -->
     <style>
       body {
@@ -27,20 +24,7 @@
         line-height: 100px;
         text-align: center;
         margin: 1rem 1rem;
-        /* 
-          We can also apply a timing function, the default is 'linear', the
-          animation is going to progress at a linear rate.
-          ease-in -  the animation starts slowly and ends up quickly
-          ease-in - the oposite of the above.
-          
-          We can provide a custom curve useing the 'cubic-bezier()' function,
-          if you go to - cubic-bezier.com - you can create a custom curve.
-
-          Also we can set a delay of when the animation should start once its
-          hovered.
-        */
-        transition: transform 0.5s cubic-bezier(0.11, 0.69, 0.83, 0.67) 0.25s,
-          background 0.5s;
+        transition: transform 0.5s, background 0.5s;
       }
 
       .b1:hover {
