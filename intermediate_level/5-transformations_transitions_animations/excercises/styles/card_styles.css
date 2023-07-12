@@ -21,8 +21,9 @@ body {
 
   /* Container geometry */
   height: fit-content;
-  max-width: 500px;
+  max-height: 20rem;
   width: 25rem;
+  max-width: 500px;
   padding: 0 2.5rem;
   border-radius: 30px;
 
