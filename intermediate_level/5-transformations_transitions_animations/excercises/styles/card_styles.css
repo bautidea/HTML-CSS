@@ -31,9 +31,22 @@ body {
   overflow: hidden;
 
   /* Shadow */
-  box-shadow: 0 0 20px 30px #e2e2e2b4;
+  box-shadow: 0 0 20px 30px #d9d9d9b4;
+
+  /* Rotation */
+  transform: rotate(-5deg);
+
+  /* Transition for animations */
+  transition: transform 0.2s;
 }
 
+.article:hover {
+  transform: rotate(0);
+}
+
+.article:hover .user_photo {
+  transform: scale(1.25);
+}
 .post {
   /* Element displaying */
   display: flex;
@@ -82,9 +95,10 @@ body {
 
 .user_photo {
   height: 3.5rem;
-  border-radius: 3rem;
+  border-radius: 100%;
   border: 3px solid whitesmoke;
   margin-right: 1rem;
+  transition: transform 0.2s;
 }
 
 .user_nickname {
