@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Best Practice</title>
+    <!-- 
+        We are going to see 8 techniques that are going to help us write cleaner
+        and more maintainable CSS.
+
+        1- Follow a naming convention. 
+            Stack to a naming convention that you use
+              .nav-bar - This is called kebab case, we separate multiple words using
+                        a hypen.
+              .navBar - Camel case, here the firsrt letter of the first word should
+                        be lowercase. But the first letter of every word after should
+                        be uppercase.
+              .NavBar - Pascal case, with pascal case the first leter of every word
+                        should be uppercase.
+              .nav_bar - Snake case, With it you separate multiple words using an 
+                        underscore.
+
+        2- Create logical sections in your stylesheet. 
+            For large projects is probably that its convenient to split stylessheet 
+              into multiple style, and then combinethem together (this is when we use 
+              CSS preprocessors tools like Sass and LESS).
+            For small projects with single stylesheet, you dont want to write all your 
+              styles in one place, its better to logically separate them in different 
+              containers.
+
+          3- Avoid over-specific selectors.
+              Suppose you have the following elements
+                <html>
+                div class="nav">
+                  <ul class="items">
+                    <il>1</il>
+                    <il>2</il>
+                    <il>3</il>
+                  </ul>
+                </div>
+
+                <css>
+                div.nav > ul.items > li {}
+
+              You want to avoid this type of selection, because it becomes hard to mantain
+                overtime. We should reduce the specificty of the selector.
+              The first thing to do is remove direct child selectors '>', because the rule
+                adjust to much to the structure, if in the future we would wrap the <ul>
+                element with a <div> the rule would break. -> div.nav ul.items li {}
+              The second thing is that the rule is to tight to the title of the HTML
+                element, if the container changes the element or the class would change the 
+                name, the rule will breake. So to prevent this we should remove the type
+                of the HTML element -> .nav .items li {}
+              Also a good thing is to give the <li> element a class, so the element type 
+                doesnt matter -> .nav .items .item {}
+              We can make this simpler, by removing the second selector, as long we have
+                an element of class '.item' inside our '.nav', the rule is gonna work.
+
+                .nav .item {}
+              This si simpler but writting code like this could lead to stepping on the
+                styles applied to the '.item' class.
+
+                .item {} -> This will step on the below rule.
+
+                .nav .item {} 
+              
+              To prevent this we can use a prefix over the '.item' -> '.nav-item', with
+                this we are representing and item inside our .nav component, if we do
+                this we have to name the class in the HTML file.
+                    <il class='nav-item'>1</il>
+                    <il class='nav-item'>2</il>
+                    <il class='nav-item'>3</il>
+              
+              By doing this we dont need the '.nav' selector
+
+              .nav-bar {}
+        
+        4- Avoid the '!important' keyword. 
+            If you have to use this keyword it meas that you did somthing 
+              wrong somewhere else (probably an over specific selector).
+        
+        5- Sort CSS properties.
+            We can do this using VSCode, suppose you have the next
+              rule:
+                  .nav-item {
+                    color: tomato;
+                    width: 100%;
+                    background: #fff;
+                    font-weight: bold;
+                  }
+              First, we select just the properties, and then go to the command palette 
+                (ctr + shift + p), and search for 'Sort Lines Ascending'
+                  .nav-item {
+                    background: #fff;
+                    color: tomato;
+                    font-weight: bold;
+                    width: 100%;
+                  }
+        
+        6- Take advantage of style inheritance.
+            One example is when we select the font-family in the html {} rule, we
+              do that so we assign the same font to the entire elements. So we dont
+              have to declare the same rule in each element.
+        
+        7- Extract repetitive patterns in your stylessheet.
+            This is part we covered in the lesson of 'Object-oriented CSS'.
+        
+        8- Avoid repetitive values (keep it DRY).
+            DRY = Dont Repeate Yourselves
+    -->
+</head>
+<body>
+    
+</body>
+</html>
