@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+    <!--  
+      BEM (Block Element Modifier) is a popular naming convention, the idea of BEM 
+        is to think our webpage as a bounch of blocks or components. This blocks
+        contain elements and can be modified.
+      A block is called a 'Card', a Card can contain elements, like a Header (inside it
+      we can have other elements), or other blocks.
+      A Modifier is a version of a block but restyled to call attention.
+
+      BEM convention:
+        - We use double hyphens (--) to separate a block from a modifier.
+        - We use two underscores (__) to separate a block from an element.
+    -->
+</head>
+<body>
+    <!--  
+        Using the BEM convention.
+          For blocks we have to separate the prefix from the proper class
+            name, using two underscores.
+          For modifiers, if we want this card to be the one that is restyled, we have to
+            give an extra class to this block, using two hyphens (--). 
+      -->
+    <div class="card card--popular">
+      <header class="card__header">
+        <span class="card__price"> Price</span>
+      </header>
+      <div class="card__body">
+        <!--  
+          The name of the button is not going to be 'card__body', because button is an 
+            indipendent block or component, that can exist outside of this block.
+        -->
+        <button class="btn"></button>
+      </div>
+    </div>
+</body>
+</html>
