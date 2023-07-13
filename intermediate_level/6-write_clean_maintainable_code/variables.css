@@ -1,0 +1,25 @@
+/* 
+  Lets see how we can use CSS variables, also called 'custom properties'.
+  Supose we have two elements and we want to give it the same bakcground,
+  we can use CSS variables to get rid of the duplication of properties.
+
+  To define variables we use the 'root' pseudo class selector.
+  To declaare a variable first we start with two hyphens (--), and then
+  give the variable a custom property and name.
+
+  Then we can acces the stored values in the variables using the 'var'
+  funciton.
+*/
+:root {
+  --primary_color: #ffdd36;
+  --border-size: 2px;
+  --border-radius: 10px;
+}
+.one {
+  background: var(--primary_color);
+  border: var(--border-size);
+}
+.two {
+  background: var(--primary_color);
+  border-radius: var(--border-radius);
+}
