@@ -1,0 +1,65 @@
+/* Defining variables */
+:root {
+  --primary_color: #2584ff;
+  --secondary_color: #00d9ff;
+  --accent_color: #ff3400;
+  --heading_color: #1b0760;
+  --text_color: #918ca4;
+}
+
+html {
+  /* 
+    Here we use 62.5% because the default size of web pages is 16px, if we give it 
+    62.5% * 16px = 10px, its easyer for us to set the font size of each element,
+    knowing that the size of the parent element is 10px.
+  */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text_color);
+  font-size: 2.4rem;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading_color);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
