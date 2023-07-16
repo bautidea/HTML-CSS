@@ -1,0 +1,15 @@
+/* 
+  Before bulding any components, we start off by defining our color palette. The palette
+  often include a Primary color, a Secondary color and an Accent color.
+
+  Opening the standard.psd in photoshop we can check this colors.
+
+  I am going to create my color palette using variables, so i can reuse them in multiple places.
+*/
+:root {
+  --primary_color: #2584ff;
+  --secondary_color: #00d9ff;
+  --accent_color: #ff3400;
+  --heading_color: #1b0760;
+  --text_color: #918ca4;
+}
