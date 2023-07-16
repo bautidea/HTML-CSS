@@ -1,4 +1,4 @@
-/* Defining variables */
+/* Variables */
 :root {
   --primary_color: #2584ff;
   --secondary_color: #00d9ff;
@@ -6,6 +6,8 @@
   --heading_color: #1b0760;
   --text_color: #918ca4;
 }
+
+/* Typography */
 
 html {
   /* 
@@ -61,5 +63,36 @@ p {
 
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+.link_arrow {
+  color: var(--accent_color);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Adding the arrow at the end of the anchor element */
+.link_arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin-left 0.25s;
+}
+
+/* Appling a effect when the link is hovered, im going to target the arrow */
+.link_arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link_arrow {
+    font-size: 1.5rem;
   }
 }
