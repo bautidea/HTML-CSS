@@ -96,3 +96,38 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/* Badges */
+
+.badge {
+  border-radius: 2.4rem;
+  color: white;
+  display: inline;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+/* Using BEM naming convention to separate the block element from the modifier */
+.badge--primary {
+  background: var(--primary_color);
+}
+
+.badge--secondary {
+  background: var(--secondary_color);
+}
+
+.badge--small {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
