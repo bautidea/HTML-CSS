@@ -17,8 +17,16 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
-    <span class="badge badge--primary">25% OFF</span>
-    <span class="badge badge--secondary">.sg &#36;7.91</span>
-    <span class="badge badge--secondary badge--small">10% OFF</span>
+    <!--  
+      For inline lists we use BEM convention, separating a block from its element.
+      'item' its an element inside a block ('list'), its an internal part of this list.
+    -->
+
+    <ul class="list list--bullet">
+      <li class="list__item">item 2</li>
+      <li class="list__item">item 3</li>
+      <li class="list__item">item 4</li>
+      <li class="list__item">item 1</li>
+    </ul>
   </body>
 </html>
