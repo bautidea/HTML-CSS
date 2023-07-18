@@ -185,3 +185,26 @@ a {
   align-items: center;
   background: #f3f9fa;
 }
+
+/* Buttons */
+
+.btn {
+  border-radius: 4rem;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.btn--accent {
+  background: var(--accent_color);
+  color: white;
+}
+
+.btn--primary {
+  padding: 2.7rem 4.7rem;
+}
+
+.btn--search {
+  padding: 1.8rem 4rem;
+}
