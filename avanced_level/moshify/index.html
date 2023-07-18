@@ -17,16 +17,17 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
-    <!--  
-      For inline lists we use BEM convention, separating a block from its element.
-      'item' its an element inside a block ('list'), its an internal part of this list.
-    -->
+    <!-- 
+      This attribute reference an element or symbol in the sprite.
+      The '#' is calling the class that is defined in the css_sprite.svg, when creating the file
+      that class is created by the generator.
 
-    <ul class="list list--bullet">
-      <li class="list__item">item 2</li>
-      <li class="list__item">item 3</li>
-      <li class="list__item">item 4</li>
-      <li class="list__item">item 1</li>
-    </ul>
+      With the <use> element we can use an SVG defined somewhere else.
+    -->
+    <span class="icon_container">
+      <svg class="icon icon--primary">
+        <use xlink:href="/data/images/css_sprite.svg#settings"></use>
+      </svg>
+    </span>
   </body>
 </html>
