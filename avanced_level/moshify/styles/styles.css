@@ -192,19 +192,49 @@ a {
   border-radius: 4rem;
   border: none;
   outline: 0;
-  display: inline-block;
-  font-weight: bold;
+  padding-block: 2.5rem;
 }
 
 .btn--accent {
   background: var(--accent_color);
   color: white;
+  font-weight: bold;
 }
 
+.btn--outline {
+  background: white;
+  border: 2px solid var(--heading_color);
+  color: var(--heading_color);
+  font-weight: 600;
+  transition: color 0.25s, background 0.25s;
+}
+
+.btn--outline:hover {
+  color: white;
+  background: var(--heading_color);
+}
+
+.btn--take-action {
+  padding-inline: 9.5rem;
+  color: white;
+  background: var(--secondary_color);
+  font-weight: bold;
+}
 .btn--primary {
-  padding: 2.7rem 4.7rem;
+  padding-inline: 14rem;
+  display: block;
 }
 
 .btn--search {
-  padding: 1.8rem 4rem;
+  padding: 2.5rem 4rem;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn--primary {
+    padding-inline: 4rem;
+  }
 }
