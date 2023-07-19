@@ -7,6 +7,11 @@
   --text_color: #918ca4;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 /* Typography */
 
 html {
@@ -189,23 +194,33 @@ a {
 /* Buttons */
 
 .btn {
-  border-radius: 4rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  border-radius: 40px;
   border: none;
   outline: 0;
-  padding-block: 2.5rem;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: 600;
 }
 
 .btn--accent {
   background: var(--accent_color);
   color: white;
-  font-weight: bold;
+  transition: background 0.15s;
+}
+
+.btn--accent:hover {
+  background: #fd7272;
 }
 
 .btn--outline {
   background: white;
   border: 2px solid var(--heading_color);
   color: var(--heading_color);
-  font-weight: 600;
   transition: color 0.25s, background 0.25s;
 }
 
@@ -214,27 +229,23 @@ a {
   background: var(--heading_color);
 }
 
-.btn--take-action {
-  padding-inline: 9.5rem;
+.btn--secondary {
   color: white;
   background: var(--secondary_color);
-  font-weight: bold;
-}
-.btn--primary {
-  padding-inline: 14rem;
-  display: block;
+  transition: background 0.25s;
 }
 
-.btn--search {
-  padding: 2.5rem 4rem;
+.btn--secondary:hover {
+  background: #8deffa;
 }
 
 .btn--block {
   width: 100%;
+  display: inline-block;
 }
 
 @media screen and (min-width: 1024px) {
-  .btn--primary {
-    padding-inline: 4rem;
+  .btn {
+    font-size: 1.5rem;
   }
 }
