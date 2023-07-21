@@ -277,7 +277,7 @@ a {
 .input_group .domain_input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  /*padding: 1.5rem 1rem;*/ /* We can uncomment this if the button is located first */
 }
 
 .input_group .btn {
