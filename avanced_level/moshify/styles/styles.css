@@ -5,6 +5,8 @@
   --accent_color: #ff3400;
   --heading_color: #1b0760;
   --text_color: #918ca4;
+  --border_color: #ccc;
+  --border_radius: 40px;
 }
 
 *,
@@ -196,7 +198,7 @@ a {
 .btn {
   font-size: 1.8rem;
   text-transform: uppercase;
-  border-radius: 40px;
+  border-radius: var(--border_radius);
   border: none;
   outline: 0;
   padding: 2rem 3rem;
@@ -253,9 +255,8 @@ a {
 /* Inputs */
 
 .domain_input {
-  border-radius: 40px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 15px #918ca48d;
+  border-radius: var(--border_radius);
+  border: 1px solid var(--border_color);
   color: var(--heading_color);
   font-size: 2rem;
   outline: 0;
@@ -264,6 +265,23 @@ a {
 
 ::placeholder {
   color: #a6a5ac;
+}
+
+.input_group {
+  border: 1px solid var(--border_color);
+  border-radius: var(--border_radius);
+  display: flex;
+}
+
+/* Using nesting to target inputs inside a container */
+.input_group .domain_input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+
+.input_group .btn {
+  margin: 4px;
 }
 
 @media screen and (min-width: 1024px) {
