@@ -17,26 +17,29 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
-    <!-- Since we have all elements in isolation we can move the components and place them as we want -->
-    <form action="">
-      <div class="input_group">
-        <input
-          type="text"
-          placeholder="Enter domain name here..."
-          class="domain_input"
-        />
-        <button class="btn btn--accent">Search</button>
-      </div>
+    <div class="card_container" style="width: 40%; margin: 50px">
+      <div class="plan">
+        <div class="card card--secondary">
+          <header class="card__header">
+            <h3 class="plan__name">Entry</h3>
+            <span class="plan__price">$14</span>
+            <span class="plan__billing_cycle">/month</span>
+            <span class="badge badge--secondary badge--small">10% OFF</span>
+            <span class="plan__description">Easy start on the cloud</span>
+          </header>
 
-      <!-- This can be another way of displaying elements -->
-      <div class="input_group">
-        <button class="btn btn--accent">Search</button>
-        <input
-          type="text"
-          placeholder="Enter domain name here..."
-          class="domain_input"
-        />
+          <div class="card__body">
+            <ul class="list list--bullet">
+              <li class="list__item">Unlimited Websites</li>
+              <li class="list__item">Unlimited Bandwidth</li>
+              <li class="list__item">100 GB SSD Storage</li>
+              <li class="list__item">3 GB RAM</li>
+            </ul>
+
+            <button class="btn btn--outline btn--block">BUY NOW</button>
+          </div>
+        </div>
       </div>
-    </form>
+    </div>
   </body>
 </html>
