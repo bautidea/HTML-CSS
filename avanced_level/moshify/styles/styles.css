@@ -355,8 +355,24 @@ a {
 */
 .plan--popular .card__header::before {
   content: url(../data/images/popular.svg);
+  display: inline-block;
+  width: 40px;
+  position: absolute;
+  top: -6px;
+  right: 5%;
 }
 
+/* 
+  Since we are using absolute positioning for the popular badge,
+  we need to set the parent positioning to relative.
+  So if we have a plan that is popular the card__header should have
+  relative postitioning.
+*/
+.plan--popular .card__header {
+  position: relative;
+}
+
+/* Since we are using  */
 @media screen and (min-widht: 1024px) {
   .plan__name {
     font-size: 1.4rem;
