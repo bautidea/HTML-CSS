@@ -349,6 +349,14 @@ a {
   margin-bottom: 2rem;
 }
 
+/* Badge - Popular */
+/* 
+  We use pseudo element selector to insert the badge, before the header of plan element 
+*/
+.plan--popular .card__header::before {
+  content: url(../data/images/popular.svg);
+}
+
 @media screen and (min-widht: 1024px) {
   .plan__name {
     font-size: 1.4rem;
@@ -365,31 +373,4 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
-}
-
-/* Badge - Popular */
-.badge_popular {
-  width: 60px;
-  height: 150px;
-  box-sizing: content-box;
-  padding-top: 15px;
-  position: relative;
-  background: red;
-  color: white;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.badge_popular::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 26px solid white;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
 }
