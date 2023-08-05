@@ -17,29 +17,22 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
-    <!-- This container is simulating the card container -->
-    <div class="card_container" style="width: 40%; margin: 50px">
-      <!-- We are goint to use a class to dinamically insert the popular badge. -->
-      <div class="plan plan--popular">
-        <div class="card card--secondary">
-          <header class="card__header">
-            <h3 class="plan__name">Entry</h3>
-            <span class="plan__price">$14</span>
-            <span class="plan__billing_cycle">/month</span>
-            <span class="badge badge--secondary badge--small">10% OFF</span>
-            <span class="plan__description">Easy start on the cloud</span>
-          </header>
-
-          <div class="card__body">
-            <ul class="list list--bullet">
-              <li class="list__item">Unlimited Websites</li>
-              <li class="list__item">Unlimited Bandwidth</li>
-              <li class="list__item">100 GB SSD Storage</li>
-              <li class="list__item">3 GB RAM</li>
-            </ul>
-
-            <button class="btn btn--outline btn--block">BUY NOW</button>
-          </div>
+    <div
+      class="media_container"
+      style="background-color: gray; width: 40%; padding: 5rem"
+    >
+      <div class="media">
+        <div class="media__icon">
+          <svg class="icon icon--media">
+            <use xlink:href="/data/images/css_sprite.svg#snap"></use>
+          </svg>
+        </div>
+        <div class="media__body">
+          <h3 class="media__title">Easy Start & Managed Updates</h3>
+          <p class="media__description">
+            Our cloud plans include wasy onboarding for new and existing sites
+            and managed WordPress and WooCommerce auto-updates.
+          </p>
         </div>
       </div>
     </div>

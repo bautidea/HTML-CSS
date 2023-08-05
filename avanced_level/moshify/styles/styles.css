@@ -390,3 +390,31 @@ a {
     font-size: 1.7rem;
   }
 }
+
+/* Media Objects */
+.media {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  margin-bottom: 6.5rem;
+}
+
+.media__icon {
+  margin-top: 1rem;
+}
+.media__body {
+  margin: 0 2rem;
+}
+.icon--media {
+  fill: #237df2;
+}
+
+.media__title {
+  color: white;
+  margin: 0 0 1rem;
+}
+
+.media__description {
+  color: #646c71;
+  margin: 0;
+}
