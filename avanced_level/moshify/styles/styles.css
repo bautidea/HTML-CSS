@@ -492,12 +492,13 @@ a {
 }
 
 /* Testimonials */
+
 .testimonial__card {
   box-shadow: 0 0 20px 10px var(--border_color);
   border-radius: var(--border_radius);
   padding: 3rem 3rem 4rem;
 }
-.quote__testimonial_image {
+.testimonial__image_cont {
   display: flex;
   justify-content: center;
   align-items: center;
