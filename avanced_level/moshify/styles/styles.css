@@ -261,6 +261,9 @@ a {
   display: inline-block;
 }
 
+.btn--streched_padding {
+  padding-inline: 6rem;
+}
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -548,6 +551,46 @@ a {
   }
 }
 
+/* Callouts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout--primary {
+  background: var(--primary_color);
+  color: white;
+}
+
+.callout__title {
+  color: white;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.callout .btn {
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--cols-2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
+  }
+}
 body {
   padding: 5rem;
 }
