@@ -598,11 +598,55 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+}
+
+.collapsible__header:hover {
+  cursor: pointer;
 }
 
 .collapsible__title {
-  margin: 0;
+  margin-top: 0;
+  font-size: 3rem;
 }
+
+.collapsible__icon {
+  transform: rotate(270deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  /* 
+    Here i am using max-height = 0 and overflow = hidden 
+      instead of display: none, to hide this element.
+    Im doing this so i can apply transition to this element. with 'display'
+      property you cant apply transition.
+  */
+  /* display: none;*/
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible__expanded .collapsible__icon {
+  transform: rotate(0);
+}
+
+.collapsible__expanded .collapsible__content {
+  /*  
+    With max-height = 100vh we are saying that the height of the content
+      area can be maximum of 100% of the height of the viewport.
+    But its not going to stretch more than its content, because we're using the
+      max-height. 
+    If instead we would use the height property with 100vh, the content area would
+      take the entire height of the viewport.
+    The actual height will be determined by the content of this element.
+  */
+  max-height: 100vh;
+  opacity: 1;
+}
+
 body {
   padding: 5rem;
 }
