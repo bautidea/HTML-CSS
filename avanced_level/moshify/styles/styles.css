@@ -591,6 +591,18 @@ a {
     margin: 0 2rem;
   }
 }
+
+/* Collapsibles */
+
+.collapsible__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.collapsible__title {
+  margin: 0;
+}
 body {
   padding: 5rem;
 }
