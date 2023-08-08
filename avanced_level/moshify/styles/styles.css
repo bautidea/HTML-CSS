@@ -61,6 +61,7 @@ p {
 */
 .container {
   max-width: 1140px;
+  margin: 0 auto; /* 0 for vertical margin / auto for horizontal margin */
 }
 
 @media screen and (min-width: 1024px) {
@@ -660,7 +661,6 @@ a {
   /* Assigning variables */
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
-  border: 2px solid red;
 }
 
 .block__header {
