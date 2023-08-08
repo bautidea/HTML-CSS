@@ -690,6 +690,80 @@ a {
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0 100%);
 }
 
+/* Navigation Bar */
+
+.navigation_bar {
+  padding: 0 1rem;
+  display: flex;
+  background: #000;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* So the navigation list shows on a second row */
+}
+
+.navigation__logo {
+  transform: translateY(5px);
+}
+
+.navigation__list {
+  width: 100%;
+  margin: 0;
+}
+
+.navigation__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+/* 
+  Here we use direct child selector in an <a> element, because
+    for links the structure will never change, we should always
+    have anchors on a navigation bar.
+*/
+.navigation__item > a {
+  color: #d2d0db;
+  transition: color 0.3s;
+}
+
+.navigation__item > a:hover {
+  color: #fff;
+}
+
+.navigation__toggler {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+
+/* 
+  We are selecting the element with both clases on it,
+    navigation_bar and collapsible__expanded
+*/
+.navigation_bar.collapsible__expanded .navigation__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__toggler {
+    display: none;
+  }
+
+  .navigation__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    /* Changing opacity and max-height so items are always shown */
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .navigation__item {
+    border: 0;
+  }
+}
+
 body {
   padding: 5rem;
 }
