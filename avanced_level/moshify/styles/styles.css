@@ -685,7 +685,7 @@ a {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 80%);
 }
 
-.block--skewed--left {
+.block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0 100%);
 }
