@@ -233,6 +233,13 @@ a {
   font-weight: 600;
 }
 
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
 .btn--accent {
   background: var(--accent_color);
   color: white;
@@ -790,5 +797,37 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* Domain */
+
+.domain .input_group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 700px;
+}
+
+.domain__prices {
+  display: grid;
+  grid-template: repeat(2, 6rem) / repeat(3, 1fr);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .domain__prices {
+    font-size: 1.5rem;
+    display: grid;
+    /* 
+      Using auto-fit to determine the number of columns automatically.
+      and minmax() function to provide a range, this function takes two values,
+      a minimum and a maximum.
+      */
+    grid-template: repeat(1, 6rem) / repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
