@@ -366,7 +366,7 @@ a {
 }
 
 .plan--big {
-  scale: 1.05;
+  scale: 1.1;
 }
 
 .plan__price {
@@ -843,20 +843,22 @@ a {
 
 /* Plan Block */
 
-.plan_block .plan {
+.block_plan .plan {
   font-size: 1.7rem;
-  margin: 0 2rem 5rem;
-  max-width: 490px;
-  align-self: center;
+  margin: 0 auto;
+  max-width: 500px;
   transition: transform 0.3s ease-in-out;
 }
 
-.plan_block .plan:hover {
+.block_plan .grid {
+  gap: 8rem 4rem;
+}
+.block_plan .plan:hover {
   transform: scale(1.03);
 }
 
 @media screen and (min-width: 1024px) {
   .plan_block .plan {
-    min-width: 350px;
+    min-width: 400px;
   }
 }
