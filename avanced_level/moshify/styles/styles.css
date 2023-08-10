@@ -129,6 +129,7 @@ a {
 /* Using BEM naming convention to separate the block element from the modifier */
 .badge--primary {
   background: var(--primary_color);
+  font-weight: 800;
 }
 
 .badge--secondary {
@@ -342,6 +343,10 @@ a {
   color: white;
 }
 
+.card--primary .badge--primary {
+  background: #126de4;
+}
+
 .card--secondary .card__header {
   background-color: var(--secondary_color);
   color: white;
@@ -358,6 +363,10 @@ a {
   margin: 0;
   font-weight: 500;
   font-size: 2.4rem;
+}
+
+.plan--big {
+  scale: 1.05;
 }
 
 .plan__price {
@@ -829,5 +838,25 @@ a {
       a minimum and a maximum.
       */
     grid-template: repeat(1, 6rem) / repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+/* Plan Block */
+
+.plan_block .plan {
+  font-size: 1.7rem;
+  margin: 0 2rem 5rem;
+  max-width: 490px;
+  align-self: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.plan_block .plan:hover {
+  transform: scale(1.03);
+}
+
+@media screen and (min-width: 1024px) {
+  .plan_block .plan {
+    min-width: 350px;
   }
 }
