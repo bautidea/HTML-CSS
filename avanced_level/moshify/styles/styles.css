@@ -862,3 +862,20 @@ a {
     min-width: 400px;
   }
 }
+
+/* Features */
+
+.features .grid {
+  align-items: center;
+}
+
+.features__img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .features .grid--cols-2 {
+    grid-template-columns: 40fr 60fr;
+    gap: 4rem;
+  }
+}
