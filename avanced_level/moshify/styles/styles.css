@@ -865,17 +865,14 @@ a {
 
 /* Features */
 
-.features .grid {
-  align-items: center;
+.features {
+  gap: 4rem 2rem;
 }
 
 .features__img {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  .features .grid--cols-2 {
-    grid-template-columns: 40fr 60fr;
-    gap: 4rem;
-  }
+.features__header {
+  margin: 2rem 0;
 }
