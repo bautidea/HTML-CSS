@@ -862,3 +862,17 @@ a {
     min-width: 400px;
   }
 }
+
+/* Features */
+
+.features {
+  gap: 4rem 2rem;
+}
+
+.features__img {
+  width: 100%;
+}
+
+.features__header {
+  margin: 2rem 0;
+}
