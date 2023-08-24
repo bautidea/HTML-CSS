@@ -867,12 +867,27 @@ a {
 
 .features {
   gap: 4rem 2rem;
+  margin: 12rem 0;
 }
 
+.features:first-of-type {
+  margin-top: 6rem;
+}
 .features__img {
   width: 100%;
 }
 
 .features__header {
   margin: 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  /*  
+    Here we are targeting the even (2nd, 4th, 6th, and so on) element on the features block.
+    Then we're gonna target the feature__content, and going to swap the order to 2 (
+      by default the order is 1).
+  */
+  .features:nth-of-type(even) .feature__content {
+    order: 2;
+  }
 }
