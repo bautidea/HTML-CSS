@@ -17,6 +17,13 @@
 }
 /* Typography */
 
+/* 
+  With the psudo element selector ::selection we are going to  specify the color of the selected text.
+*/
+::selection {
+  background: var(--primary_color);
+  color: white;
+}
 html {
   /* 
     Here we use 62.5% because the default size of web pages is 16px, if we give it 
@@ -51,6 +58,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
@@ -156,7 +164,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--heading_color);
 }
 
 /* In inline list we want to convert each eleemnt in inline elements */
@@ -168,6 +175,7 @@ a {
 .list--bullet {
   list-style-image: url("/data/icons/tick.svg");
   padding-left: 3rem;
+  color: var(--heading_color);
 }
 
 /* Applying padding to the text after the bullet list image */
@@ -437,12 +445,11 @@ a {
 
 .media {
   display: flex;
-  flex-direction: row;
-  align-items: top;
+  margin-bottom: 4rem;
 }
 
 .media__icon {
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 
 .media__body {
@@ -693,18 +700,20 @@ a {
   color: #7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
   color: white;
 }
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 90%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0 100%);
 }
 
 /* Navigation Bar */
@@ -782,10 +791,6 @@ a {
 }
 
 /* Hero */
-
-.hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0 100%);
-}
 
 .hero__tagline {
   font-size: 2rem;
@@ -894,20 +899,25 @@ a {
 
 /* Showcase */
 
-.showcase {
-  text-align: center;
-}
-
-.showcase__img {
+.showcase__img > img {
   width: 100%;
-}
-
-.showcase__items {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
 }
 
 .showcase .media__title {
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .showcase__img {
+    justify-self: end;
+  }
+
+  .showcase__img > img {
+    width: auto;
+    max-width: 700px;
+  }
 }
