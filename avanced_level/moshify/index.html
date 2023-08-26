@@ -17,6 +17,83 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
+    <section class="block block--dark block--skewed-right showcase">
+      <header class="block__header">
+        <h2 class="block__heading">User-Friendly Control Panel</h2>
+      </header>
+
+      <article class="container grid grid--cols-2">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              ./data/images/resize_img/ipad@1x.webp 1x,
+              ./data/images/resize_img/ipad@2x.webp 2x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              ./data/images/resize_img/ipad@1x.png 1x,
+              ./data/images/resize_img/easy@2x.png 2x
+            "
+          />
+          <img
+            class="features__img"
+            src="./data/images/ipad.png"
+            alt="Image of a graphs"
+          />
+        </picture>
+
+        <div class="showcase__items">
+          <div class="media">
+            <div class="media__icon">
+              <svg class="icon icon--primary icon--media">
+                <use xlink:href="/data/images/css_sprite.svg#snap"></use>
+              </svg>
+            </div>
+            <div class="media__body">
+              <h3 class="media__title">Easy Start & Managed Updates</h3>
+              <p class="media__description">
+                Our cloud plans include wasy onboarding for new and existing
+                sites and managed WordPress and WooCommerce auto-updates.
+              </p>
+            </div>
+          </div>
+
+          <div class="media">
+            <div class="media__icon">
+              <svg class="icon icon--primary icon--media">
+                <use xlink:href="/data/images/css_sprite.svg#growth"></use>
+              </svg>
+            </div>
+            <div class="media__body">
+              <h3 class="media__title">Staging, Hit & WP-CLI</h3>
+              <p class="media__description">
+                We make your WordPress and WooCommerce development flow easier
+                with a convenient staging tool and Git and WP-CLI integration.
+              </p>
+            </div>
+          </div>
+
+          <div class="media">
+            <div class="media__icon">
+              <svg class="icon icon--primary icon--media">
+                <use xlink:href="/data/images/css_sprite.svg#wordpress"></use>
+              </svg>
+            </div>
+            <div class="media__body">
+              <h3 class="media__title">Dynamic Caching & More</h3>
+              <p class="media__description">
+                Speed up your WordPress and Woo sites with our SG Optimizer
+                plugin through smart dynamic caching and multiple other
+                performance optimizations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
     <script src="/js/main.js"></script>
   </body>
 </html>

@@ -697,7 +697,7 @@ a {
   color: white;
 }
 
-.block--skewed--right {
+.block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 80%);
 }
@@ -890,4 +890,24 @@ a {
   .features:nth-of-type(even) .feature__content {
     order: 2;
   }
+}
+
+/* Showcase */
+
+.showcase {
+  text-align: center;
+}
+
+.showcase__img {
+  width: 100%;
+}
+
+.showcase__items {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.showcase .media__title {
+  color: white;
 }
