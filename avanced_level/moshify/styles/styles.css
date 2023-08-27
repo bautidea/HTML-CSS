@@ -234,7 +234,7 @@ a {
   border-radius: var(--border_radius);
   border: none;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   cursor: pointer;
   white-space: nowrap;
   text-align: center;
@@ -292,6 +292,7 @@ a {
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
+    padding: 2rem 4rem;
   }
 }
 
@@ -321,6 +322,7 @@ a {
   border: 0;
   flex-grow: 1;
   /*padding: 1.5rem 1rem;*/ /* We can uncomment this if the button is located first */
+  width: 0;
 }
 
 .input_group .btn {
@@ -834,13 +836,24 @@ a {
 }
 
 .domain__prices {
+  color: var(--heading_color);
   display: grid;
-  grid-template: repeat(2, 6rem) / repeat(3, 1fr);
+  grid-template: repeat(4, 6rem) / repeat(2, 1fr);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.domain__prices .list__item:hover {
+  color: red;
+  background: #00d9ff;
+  cursor: pointer;
+}
+
+.domain__prices .badge:hover {
+  color: red;
 }
 
 @media screen and (min-width: 1024px) {
