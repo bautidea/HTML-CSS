@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Moshify</title>
     <!-- Importing font style. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +17,104 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
+    <header>
+      <nav class="navigation_bar collapsible">
+        <!--
+            Wraping logo in anchor so when user clicks it, hes redirectioned to homepage
+          -->
+        <a href="/" class="navigation__logo">
+          <img src="./data/images/logo.svg" alt="" />
+        </a>
+        <!-- navigation menu -->
+        <svg class="icon icon--white navigation__toggler">
+          <use xlink:href="/data/images/css_sprite.svg#menu"></use>
+        </svg>
+        <!-- Navigation items -->
+        <ul class="list navigation__list collapsible__content">
+          <li class="navigation__item"><a href="#">Hosting</a></li>
+          <li class="navigation__item"><a href="#">VPS</a></li>
+          <li class="navigation__item"><a href="#">Domain</a></li>
+          <li class="navigation__item"><a href="#">Pricing</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--  
+  Classes go from more general classes to more specific clases, this is
+    because we use specific classes to step on some properties, for example
+    the hero class is stepping on some properties from block class.
+-->
+    <section class="block block--dark block--skewed-left hero">
+      <div class="container grid grid--cols-2">
+        <header class="hero__content block__header">
+          <h1 class="block__heading">Cloud Hosting for Pros</h1>
+          <p class="hero__tagline">
+            Deploy your website in less than 60 seconds.
+          </p>
+          <!-- 
+          This button is an anchor because when the user clicks on it, they should
+            be redirected somewhere else, prehaps to the signup page, idk.
+        -->
+          <a class="btn btn--accent btn--streched_padding"> get started </a>
+        </header>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              ./data/images/resize_img/banner@1x.webp 1x,
+              ./data/images/resize_img/banner@2x.webp 2x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              ./data/images/resize_img/banner@1x.png 1x,
+              ./data/images/resize_img/banner@2x.png 2x
+            "
+          />
+          <img class="hero__img" src="./data/images/banner.png" alt="" />
+        </picture>
+      </div>
+    </section>
+
+    <section class="block container domain">
+      <header class="block__header">
+        <h2>The best webhosting Starting at per month</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+          sapiente eius iure eum explicabo dicta minima, quia, ad cupiditate
+          laborum at quibusdam numquam optio neque.
+        </p>
+      </header>
+
+      <form action="">
+        <div class="input_group">
+          <input
+            type="text"
+            placeholder="Enter domain name here..."
+            class="domain_input"
+          />
+          <button class="btn btn--accent">
+            <svg class="icon icon--white">
+              <use xlink:href="/data/images/css_sprite.svg#search"></use>
+            </svg>
+            Search
+          </button>
+        </div>
+      </form>
+
+      <ul class="list domain__prices">
+        <li class="list__item">.com $9.26</li>
+        <li class="list__item">
+          <span class="badge badge--secondary">.sg $7.91</span>
+        </li>
+        <li class="list__item">.space $12.98</li>
+        <li class="list__item">.info $14.15</li>
+        <li class="list__item">.net $16.15</li>
+        <li class="list__item">.xyz $10.15</li>
+        <li class="list__item">More</li>
+      </ul>
+    </section>
     <script src="/js/main.js"></script>
   </body>
 </html>
