@@ -15,6 +15,9 @@
     <!-- Stylesheet and nomalize sheet. -->
     <link rel="stylesheet" href="/styles/normalize_css.css" />
     <link rel="stylesheet" href="/styles/styles.css" />
+
+    <!-- Scrolling animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <section class="block--dark">
@@ -47,8 +50,8 @@
     the hero class is stepping on some properties from block class.
 -->
     <section class="block block--dark block--skewed-left hero">
-      <div class="container grid grid--cols-2">
-        <header class="hero__content block__header">
+      <div class="container grid grid--cols-2" >
+        <header class="hero__content block__header" data-aos="fade-right">
           <h1 class="block__heading">Cloud Hosting for Pros</h1>
           <p class="hero__tagline">
             Deploy your website in less than 60 seconds.
@@ -59,7 +62,7 @@
         -->
           <a class="btn btn--accent btn--streched_padding"> get started </a>
         </header>
-        <picture>
+        <picture data-aos="fade-left">
           <source
             type="image/webp"
             srcset="
@@ -79,7 +82,7 @@
       </div>
     </section>
 
-    <section class="block container domain">
+    <section class="block container domain" data-aos="fade-up">
       <header class="block__header">
         <h2>The best webhosting Starting at per month</h2>
         <p>
@@ -105,7 +108,7 @@
         </div>
       </form>
 
-      <ul class="list domain__prices">
+      <ul class="list domain__prices" data-aos="fade-up">
         <li class="list__item"><a href="#">.com $9.26</a></li>
         <li class="list__item">
           <a class="badge badge--secondary" href="#">.sg $7.91</a>
@@ -118,7 +121,7 @@
       </ul>
     </section>
 
-    <section class="block container block_plan">
+    <section class="block container block_plan" data-aos="fade-up">
       <div class="grid grid--cols-3">
         <!-- We are goint to use a class to dinamically insert the popular badge. -->
         <div class="plan">
@@ -189,14 +192,14 @@
     </section>
 
     <section class="block container">
-      <header class="block__header">
+      <header class="block__header" data-aos="fade-up">
         <h2>Host on The Cloud to Keep Growing</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, quos!
         </p>
       </header>
       <article class="grid grid--cols-2 features">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-right">
           <span class="icon_container">
             <svg class="icon icon--primary">
               <use xlink:href="/data/images/css_sprite.svg#easy"></use>
@@ -210,7 +213,7 @@
           </p>
           <a class="link_arrow" href="#">learn more</a>
         </div>
-        <picture>
+        <picture data-aos="fade-left">
           <source
             type="image/webp"
             srcset="
@@ -234,7 +237,8 @@
       </article>
 
       <article class="grid grid--cols-2 features">
-        <div class="feature__content">
+        <!-- We use data-aos to use scrolling animation -->
+        <div class="feature__content" data-aos="fade-left">
           <span class="icon_container">
             <svg class="icon icon--primary">
               <use xlink:href="/data/images/css_sprite.svg#computer"></use>
@@ -248,7 +252,7 @@
           </p>
           <a class="link_arrow" href="#">learn more</a>
         </div>
-        <picture>
+        <picture data-aos="fade-right">
           <source
             type="image/webp"
             srcset="
@@ -272,7 +276,7 @@
       </article>
 
       <article class="grid grid--cols-2 features">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-right">
           <span class="icon_container">
             <svg class="icon icon--primary">
               <use xlink:href="/data/images/css_sprite.svg#settings"></use>
@@ -286,7 +290,7 @@
           </p>
           <a class="link_arrow" href="#">learn more</a>
         </div>
-        <picture>
+        <picture data-aos="fade-left">
           <source
             type="image/webp"
             srcset="
@@ -311,85 +315,81 @@
     </section>
 
     <section class="block block--dark block--skewed-right showcase">
-      <header class="block__header">
-        <h2>User-Friendly Control Panel</h2>
-      </header>
-  
-      <div class="container grid grid--cols-2">
-        <picture class="showcase__img">
-          <source
-            type="image/webp"
-            srcset="
-              ./data/images/resize_img/ipad@1x.webp 1x,
-              ./data/images/resize_img/ipad@2x.webp 2x
-            "
-          />
-          <source
-            type="image/png"
-            srcset="
-              ./data/images/resize_img/ipad@1x.png 1x,
-              ./data/images/resize_img/ipad@2x.png 2x
-            "
-          />
-          <img src="./data/images/ipad.png" alt="Image of a graphs" />
-        </picture>
-  
-        <ul class="list">
-          <li>
-            <div class="media">
-              <div class="media__icon">
-                <svg class="icon icon--primary icon--media">
-                  <use xlink:href="/data/images/css_sprite.svg#snap"></use>
-                </svg>
+        <header class="block__header"  data-aos="fade-up">
+          <h2>User-Friendly Control Panel</h2>
+        </header>
+        <div class="container grid grid--cols-2">
+          <picture class="showcase__img"  data-aos="fade-right">
+            <source
+              type="image/webp"
+              srcset="
+                ./data/images/resize_img/ipad@1x.webp 1x,
+                ./data/images/resize_img/ipad@2x.webp 2x
+              "
+            />
+            <source
+              type="image/png"
+              srcset="
+                ./data/images/resize_img/ipad@1x.png 1x,
+                ./data/images/resize_img/ipad@2x.png 2x
+              "
+            />
+            <img src="./data/images/ipad.png" alt="Image of a graphs" />
+          </picture>
+          <ul class="list"  data-aos="fade-up">
+            <li>
+              <div class="media">
+                <div class="media__icon">
+                  <svg class="icon icon--primary icon--media">
+                    <use xlink:href="/data/images/css_sprite.svg#snap"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title">Easy Start & Managed Updates</h3>
+                  <p class="media__description">
+                    Our cloud plans include wasy onboarding for new and existing
+                    sites and managed WordPress and WooCommerce auto-updates.
+                  </p>
+                </div>
               </div>
-              <div class="media__body">
-                <h3 class="media__title">Easy Start & Managed Updates</h3>
-                <p class="media__description">
-                  Our cloud plans include wasy onboarding for new and existing
-                  sites and managed WordPress and WooCommerce auto-updates.
-                </p>
+            </li>
+            <li>
+              <div class="media">
+                <div class="media__icon">
+                  <svg class="icon icon--primary icon--media">
+                    <use xlink:href="/data/images/css_sprite.svg#growth"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title">Staging, Hit & WP-CLI</h3>
+                  <p class="media__description">
+                    We make your WordPress and WooCommerce development flow easier
+                    with a convenient staging tool and Git and WP-CLI integration.
+                  </p>
+                </div>
               </div>
-            </div>
-          </li>
-  
-          <li>
-            <div class="media">
-              <div class="media__icon">
-                <svg class="icon icon--primary icon--media">
-                  <use xlink:href="/data/images/css_sprite.svg#growth"></use>
-                </svg>
+            </li>
+            <li>
+              <div class="media">
+                <div class="media__icon">
+                  <svg class="icon icon--primary icon--media">
+                    <use xlink:href="/data/images/css_sprite.svg#wordpress"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title">Dynamic Caching & More</h3>
+                  <p class="media__description">
+                    Speed up your WordPress and Woo sites with our SG Optimizer
+                    plugin through smart dynamic caching and multiple other
+                    performance optimizations.
+                  </p>
+                </div>
               </div>
-              <div class="media__body">
-                <h3 class="media__title">Staging, Hit & WP-CLI</h3>
-                <p class="media__description">
-                  We make your WordPress and WooCommerce development flow easier
-                  with a convenient staging tool and Git and WP-CLI integration.
-                </p>
-              </div>
-            </div>
-          </li>
-  
-          <li>
-            <div class="media">
-              <div class="media__icon">
-                <svg class="icon icon--primary icon--media">
-                  <use xlink:href="/data/images/css_sprite.svg#wordpress"></use>
-                </svg>
-              </div>
-              <div class="media__body">
-                <h3 class="media__title">Dynamic Caching & More</h3>
-                <p class="media__description">
-                  Speed up your WordPress and Woo sites with our SG Optimizer
-                  plugin through smart dynamic caching and multiple other
-                  performance optimizations.
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
     </section>
 
-    <section class="block">
+    <section class="block"  data-aos="fade-up">
       <header class="block__header">
         <h2>What our Customer are Saying</h2>
         <p>
@@ -448,7 +448,7 @@
     </section>
 
     <article class="block block--black_and_white">
-      <div class="callout callout--primary">
+      <div class="callout callout--primary"  data-aos="fade-right">
         <div class="grid grid--cols-2">
           <div class="callout__content">
             <h3 class="callout__title">Ready To Get Started?</h3>
@@ -465,7 +465,7 @@
     </article>
 
     <footer class="block block--dark footer">
-      <div class="container grid footer__sections">
+      <div class="container grid footer__sections"  data-aos="fade-up">
         <section class="collapsible collapsible__expanded">
           <header class="collapsible__header">
             <h2 class="collapsible__title footer__heading">products</h2>
@@ -546,6 +546,11 @@
         </section>
       </div>
   </footer>
+
     <script src="/js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
