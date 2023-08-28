@@ -94,6 +94,7 @@ p {
 /* Links */
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -842,18 +843,13 @@ a {
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
+  align-items: center;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.domain__prices .list__item:hover {
-  color: red;
-  background: #00d9ff;
-  cursor: pointer;
-}
-
-.domain__prices .badge:hover {
-  color: red;
+.domain__prices .list__item:last-child {
+  grid-column: 1 / -1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -866,6 +862,10 @@ a {
       a minimum and a maximum.
       */
     grid-template: repeat(1, 6rem) / repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .domain__prices .list__item:last-child {
+    grid-column: auto;
   }
 }
 
